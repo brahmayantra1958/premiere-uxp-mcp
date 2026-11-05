@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionList>
+  <Extension Id="ai.brahma.yantra.caption-helper">
+    <HostList>
+      <Host Name="PPRO" Port="9234" />
+    </HostList>
+  </Extension>
+</ExtensionList>

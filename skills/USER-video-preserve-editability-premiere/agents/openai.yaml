@@ -1,0 +1,6 @@
+interface:
+  display_name: "Premiere 원본·편집 가능성 보존"
+  short_description: "타이밍·사운드·원본 구도를 보존하며 모션으로 재편집"
+  default_prompt: "$USER-video-preserve-editability-premiere을 적용해 요청한 Premiere 작업을 진행해줘."
+policy:
+  allow_implicit_invocation: true

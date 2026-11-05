@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" href="styles.css" /></head>
+<body>
+  <main id="panel" class="panel-shell" aria-label="Premiere MCP">
+    <header class="app-bar"><div><h1>Premiere MCP</h1><p>Codex 에이전트 연결</p></div><button id="settingsButton" class="button button--secondary" type="button">설정</button></header>
+    <section class="connection-section" aria-label="MCP 연결">
+      <div class="connection-controls"><div class="port-field"><label for="serverPort">포트 번호</label><input id="serverPort" value="8099" readonly aria-describedby="portHelp" /></div><button id="connectButton" class="button" type="button">연결</button></div>
+      <div class="connection-status"><span id="premiereStatusDot" class="status-dot" aria-hidden="true"></span><strong id="statusBadge" role="status">연결 확인 중</strong></div>
+      <p id="connectionMode" class="help">프로젝트 확인 중</p><p id="portHelp" class="help">localhost · 로컬 MCP 서버</p>
+    </section>
+    <section class="context-bar" aria-label="현재 프로젝트"><span id="premiereContextText">프로젝트 확인 중…</span><button id="refreshContextButton" class="text-button" type="button">새로고침</button></section>
+    <section class="tasks-section" aria-labelledby="tasksTitle"><div class="section-heading"><h2 id="tasksTitle">작업 목록 <span id="taskCount">0</span></h2><button id="clearTasksButton" class="text-button" type="button">완료 기록 지우기</button></div><p class="help">새 작업이 위에 표시됩니다 · 최근 100개</p><div id="taskEmpty" class="empty-state"><strong>작업 대기 중</strong><p>에이전트가 실행한 MCP 작업이 여기에 표시됩니다.</p></div><div id="taskList" class="task-list" role="list" aria-label="MCP 작업 목록"></div></section>
+  </main>
+  <section id="settingsDialog" class="panel-shell settings-page" aria-labelledby="settingsTitle" hidden>
+    <header class="app-bar"><h1 id="settingsTitle">연결 설정</h1><button id="closeSettingsButton" class="button button--secondary" type="button">닫기</button></header>
+    <div class="settings-body">
+      <section class="settings-section"><h2>로컬 연결</h2><label for="pairingToken">일회용 페어링 토큰</label><input id="pairingToken" type="password" autocomplete="off" spellcheck="false" /><p class="help">저장된 연결은 자동으로 사용합니다. 최초 연결에만 로컬 서버의 일회 승인이 필요합니다.</p><div class="settings-actions"><button id="pairButton" class="button" type="button">연결</button><button id="forgetButton" class="button button--secondary" type="button" disabled>저장 연결 삭제</button></div></section>
+      <section class="settings-section"><h2>연결 정보</h2><p>패널 <strong id="panelVersion">—</strong></p><p>Premiere <span id="premiereVersion">—</span> · UXP <span id="uxpVersion">—</span></p><p id="projectName">—</p><p id="sequenceName" hidden>—</p><pre id="activityLog" class="connection-log" aria-label="최근 연결 진단"></pre></section>
+    </div>
+  </section>
+    <section id="maskPromptDialog" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="maskPromptTitle" tabindex="-1" hidden>
+      <div class="dialog-shell modal-card mask-prompt-dialog">
+        <header class="dialog-header">
+          <div>
+            <p class="eyebrow">OBJECT MASK</p>
+            <h2 id="maskPromptTitle">객체 선택</h2>
+            <p id="maskPromptMeta" class="mask-prompt-meta">프레임 준비 중</p>
+          </div>
+          <button id="maskPromptClose" class="icon-button" type="button" aria-label="객체 선택 취소" title="닫기">
+            <span class="button-glyph button-glyph--close" aria-hidden="true">×</span>
+          </button>
+        </header>
+        <div class="mask-prompt-body">
+          <div class="mask-prompt-toolbar" role="toolbar" aria-label="객체 선택 도구">
+            <button id="maskPromptPositive" class="button button--secondary" type="button" aria-pressed="true">+ 포함</button>
+            <button id="maskPromptNegative" class="button button--secondary" type="button" aria-pressed="false">− 제외</button>
+            <button id="maskPromptBox" class="button button--secondary" type="button" aria-pressed="false">박스</button>
+            <button id="maskPromptUndo" class="button button--quiet" type="button">실행 취소</button>
+            <button id="maskPromptClear" class="button button--quiet" type="button">지우기</button>
+          </div>
+          <p class="help">포인트를 찍거나, 박스 모드에서 두 모서리를 차례로 선택하세요. 좌표는 이 이미지의 원본 픽셀로 저장됩니다.</p>
+          <div id="maskPromptStage" class="mask-prompt-stage" aria-label="객체를 지정할 프레임">
+            <img id="maskPromptImage" alt="Premiere에서 캡처한 객체 마스크 기준 프레임" />
+            <div id="maskPromptMarks" class="mask-prompt-marks" aria-hidden="true"></div>
+          </div>
+          <div class="mask-prompt-summary">
+            <span id="maskPromptCount">포인트 0개</span>
+            <span id="maskPromptError" class="inline-error" role="alert"></span>
+          </div>
+        </div>
+        <footer class="mask-prompt-footer">
+          <button id="maskPromptCancel" class="button button--secondary" type="button">취소</button>
+          <button id="maskPromptConfirm" class="button" type="button">이 객체 사용</button>
+        </footer>
+      </div>
+    </section>
+
+
+  <script src="deployment-config.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

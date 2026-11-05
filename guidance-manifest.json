@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "packageVersion": "0.3.17",
+  "serverVersion": "0.2.16",
+  "panelSourceVersion": "0.16.10",
+  "bundleVersion": "1.0.12",
+  "contractVersion": "1.0.0",
+  "minimumPanelVersion": "0.15.0",
+  "optionalFeatures": {
+    "trackLocks": {
+      "minimumPanelVersion": "0.15.1",
+      "helper": "ai.brahma.yantra.track-lock",
+      "liveProof": "UNVERIFIED"
+    },
+    "nativeVideoTime": {
+      "platform": "win32",
+      "dependency": "separately installed Adobe Native Read SDK adapter"
+    },
+    "nativeVisual": {
+      "platform": "win32",
+      "dependency": "feature-specific C# and Adobe SDK adapters"
+    },
+    "captions": {
+      "dependency": "version-matched caption helper; inspect installed manifest and live heartbeat"
+    }
+  },
+  "livePremiere": "UNVERIFIED_BY_THIS_PACKAGE",
+  "files": {
+    "docs/agent-contract.md": "69178e75d63aaa8da1f59e85ebd7b3edf75b08df0c7b01c24acced165608f8d2",
+    "docs/agent-instructions.md": "3392503c95f2017eb30dcd519174278b058c41dacd348be2ab1a2f27ce848e14",
+    "docs/agent-start-here.md": "36cea00fa1d5d4acaf4311a4a47ddf090d9c2fd151bafd25d4ab1689829c9eb1",
+    "docs/domain-model.md": "af8a93b1e1f73fe66991281e45ac495d6508c2e4dbd99fe5b92c931b0451f2b4",
+    "docs/examples/agent-calls.json": "981700ecb5e4d90feddf0b24c7cb72f4d3e2bbd8704321a4241c8053e212c739",
+    "docs/installation.md": "98cf1e3de77de4845971e82f0989bd22fad0f3e64fcc42361a4fa8b6901e975e",
+    "docs/native-addons.md": "9d29a1700325c2174711bf3fa55b6154550add4df8a08810c01e513b7d89246c",
+    "docs/operator-runbook.md": "f84b371a0aebd54eb03549e7344b00e3e740568ab08ef81e7cbb84cd3aaa295b",
+    "docs/release-status.md": "d5cfa0ca325e8d5419b3eb73b83a28a5170217fc34a0372b2e2fe42263c632c8",
+    "docs/source-editability-20261018.md": "95b71553f1011f6697792e87331e376481a2493faa9c7385e2f0bdca7e9bf342",
+    "docs/tool-catalog.md": "517c3f8c7106539077df5f5078fef5e7cf197a7f80a2c332772535c238ef4ae5",
+    "skills/README.md": "3c53d9a8c3fb366bf283219fd2b424e5bac6124685342fe25fbca46d98fd3fe7",
+    "skills/USER-computer-use-manage-memory/SKILL.md": "e65c64d653500372ce86a349745ad9210198969449ce0f34f1772de540511d93",
+    "skills/USER-computer-use-manage-memory/agents/openai.yaml": "8f2d9707352c2e564aa2c14a242f79809b2bb7f782ba4465dd2596f25efed148",
+    "skills/USER-premiere-connect-recover/SKILL.md": "adcd293216d13c8ffffe0e8c64bab0435102c7e5a52e72cecfa41b3f72d74ffe",
+    "skills/USER-premiere-connect-recover/agents/openai.yaml": "68c7972627a468f540bdc00c83ba1601862ec22305b121ef86a9826bb45f08a7",
+    "skills/USER-premiere-connect-recover/references/reload-recovery.md": "ad5931cf6c0b078267278ea1bf77b15dfbd4a96d627bbee3686983f0d8abf9c5",
+    "skills/USER-premiere-connect-recover/references/setup.md": "934f3ff9048bc8938381d51113d545533d39fc8973503c4e3572c68d51bf4951",
+    "skills/USER-video-edit-premiere/SKILL.md": "9174da2ee99bc83c54adc65fdf358e6eb386f9922f0df7099a0aa7b62744d624",
+    "skills/USER-video-edit-premiere/agents/openai.yaml": "b1ab29714d8fa391c286ed4ba0468622f2b37fd8838310bd55a272614e976a26",
+    "skills/USER-video-edit-premiere/references/captions-graphics.md": "26c411360ff97fc108366848b9bd8f460e7c8a09f2e9417b965c048ef3f58191",
+    "skills/USER-video-edit-premiere/references/effects.md": "68dada27d2894330f61bff4d38a3d059c43258cb765777c5e01320b41e7597dc",
+    "skills/USER-video-edit-premiere/references/execution-recipes.md": "b25af27a7aa2edd74ca9f93e36bdb9ec457490f44261334431d7b54556d03701",
+    "skills/USER-video-edit-premiere/references/jobs-events.md": "3b507ca844f95d69117e7fbc08c0b83ec393b29a69cb5abcd0547f9e64849e26",
+    "skills/USER-video-edit-premiere/references/masks-native.md": "5fa4884c9537c28e82d505c52ebd9e8eb0c47e3b39d876ab4d41077b739f662e",
+    "skills/USER-video-edit-premiere/references/motion-reframe.md": "2307c0679645c5fae2d1bd30881f6f53e7696400e3531d8556624a62b7869be7",
+    "skills/USER-video-edit-premiere/references/recovery.md": "afa2d286b3e3d202e7e6689a3976f80e8de3f09ab81767cce596604e5682d749",
+    "skills/USER-video-edit-premiere/references/targets-media.md": "26ad4043be7f617a36e86564ca6fcb4b07ba4f11f27ed950187a9ac2b6fa6bff",
+    "skills/USER-video-edit-premiere/references/timeline.md": "579b62824e7d724bb883e8338829374df3e5b07985c470b3ef2a23c54e5b1e51",
+    "skills/USER-video-edit-premiere/references/verify-deliver.md": "d3f2f8931e6f4a3f55f87fcda9ff53b2963f52c68b5b9a6ddf72228f3df0eb60",
+    "skills/USER-video-preserve-editability-premiere/SKILL.md": "4d35872716b9b698a20d6461b8e3efb7ef5161fb227142cf4edd2c84fb324f37",
+    "skills/USER-video-preserve-editability-premiere/agents/openai.yaml": "6816a4b97ad878241ba6329a71bc3e980144e9a50c24c57402123ab9b53f4ae5",
+    "skills/bundle.json": "49738cdc00eecbd34079a6071cf92d5b7c5d573bbbe18cd20019ab3075dc097e"
+  }
+}

@@ -1,0 +1,5845 @@
+{
+  "before": [
+    {
+      "componentIndex": 0,
+      "displayName": "볼륨",
+      "matchName": "Internal Volume Stereo",
+      "params": [
+        {
+          "paramIndex": 0,
+          "displayName": "음소거",
+          "value": false,
+          "valueKind": "boolean",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 0,
+              "expectedDisplayName": "음소거"
+            },
+            "inputKind": "boolean",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 1,
+          "displayName": "레벨",
+          "value": 0.06309573352336884,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 1,
+              "expectedDisplayName": "레벨"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        }
+      ],
+      "readbackCoverage": {
+        "opaqueParameterIndices": [],
+        "unverifiedParameterIndices": []
+      }
+    },
+    {
+      "componentIndex": 1,
+      "displayName": "채널 볼륨",
+      "matchName": "Internal Channel Volume Stereo",
+      "params": [
+        {
+          "paramIndex": 0,
+          "displayName": "무시",
+          "value": false,
+          "valueKind": "boolean",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 0,
+              "expectedDisplayName": "무시"
+            },
+            "inputKind": "boolean",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 1,
+          "displayName": "왼쪽",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 1,
+              "expectedDisplayName": "왼쪽"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 2,
+          "displayName": "오른쪽",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 2,
+              "expectedDisplayName": "오른쪽"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 3,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 3,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 4,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 4,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 5,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 5,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 6,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 6,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 7,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 7,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 8,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 8,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 9,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 9,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 10,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 10,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 11,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 11,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 12,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 12,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 13,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 13,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 14,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 14,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 15,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 15,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 16,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 16,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 17,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 17,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 18,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 18,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 19,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 19,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 20,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 20,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 21,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 21,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 22,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 22,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 23,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 23,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 24,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 24,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 25,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 25,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 26,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 26,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 27,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 27,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 28,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 28,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 29,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 29,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 30,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 30,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 31,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 31,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 32,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 32,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        }
+      ],
+      "readbackCoverage": {
+        "opaqueParameterIndices": [],
+        "unverifiedParameterIndices": []
+      }
+    },
+    {
+      "componentIndex": 2,
+      "displayName": "밸런스",
+      "matchName": "Internal Audio Balance",
+      "params": [
+        {
+          "paramIndex": 0,
+          "displayName": "무시",
+          "value": false,
+          "valueKind": "boolean",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": true,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 0,
+              "expectedDisplayName": "무시"
+            },
+            "inputKind": "boolean",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "requires_explicit_animation_edit",
+            "keyframeWrite": "native_type_preflight_required",
+            "emptyAnimationBaseValue": "explicit_preserveEmptyAnimation_required"
+          }
+        },
+        {
+          "paramIndex": 1,
+          "displayName": "밸런스",
+          "value": 0.75,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": true,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 1,
+              "expectedDisplayName": "밸런스"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "requires_explicit_animation_edit",
+            "keyframeWrite": "native_type_preflight_required",
+            "emptyAnimationBaseValue": "explicit_preserveEmptyAnimation_required"
+          }
+        }
+      ],
+      "readbackCoverage": {
+        "opaqueParameterIndices": [],
+        "unverifiedParameterIndices": []
+      }
+    }
+  ],
+  "afterValues": [
+    {
+      "componentIndex": 0,
+      "displayName": "볼륨",
+      "matchName": "Internal Volume Stereo",
+      "params": [
+        {
+          "paramIndex": 0,
+          "displayName": "음소거",
+          "value": false,
+          "valueKind": "boolean",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 0,
+              "expectedDisplayName": "음소거"
+            },
+            "inputKind": "boolean",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 1,
+          "displayName": "레벨",
+          "value": 0.06309573352336884,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 1,
+              "expectedDisplayName": "레벨"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        }
+      ],
+      "readbackCoverage": {
+        "opaqueParameterIndices": [],
+        "unverifiedParameterIndices": []
+      }
+    },
+    {
+      "componentIndex": 1,
+      "displayName": "채널 볼륨",
+      "matchName": "Internal Channel Volume Stereo",
+      "params": [
+        {
+          "paramIndex": 0,
+          "displayName": "무시",
+          "value": false,
+          "valueKind": "boolean",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 0,
+              "expectedDisplayName": "무시"
+            },
+            "inputKind": "boolean",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 1,
+          "displayName": "왼쪽",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 1,
+              "expectedDisplayName": "왼쪽"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 2,
+          "displayName": "오른쪽",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 2,
+              "expectedDisplayName": "오른쪽"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 3,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 3,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 4,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 4,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 5,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 5,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 6,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 6,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 7,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 7,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 8,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 8,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 9,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 9,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 10,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 10,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 11,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 11,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 12,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 12,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 13,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 13,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 14,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 14,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 15,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 15,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 16,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 16,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 17,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 17,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 18,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 18,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 19,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 19,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 20,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 20,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 21,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 21,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 22,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 22,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 23,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 23,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 24,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 24,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 25,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 25,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 26,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 26,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 27,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 27,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 28,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 28,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 29,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 29,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 30,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 30,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 31,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 31,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 32,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 32,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        }
+      ],
+      "readbackCoverage": {
+        "opaqueParameterIndices": [],
+        "unverifiedParameterIndices": []
+      }
+    },
+    {
+      "componentIndex": 2,
+      "displayName": "밸런스",
+      "matchName": "Internal Audio Balance",
+      "params": [
+        {
+          "paramIndex": 0,
+          "displayName": "무시",
+          "value": false,
+          "valueKind": "boolean",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": true,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 0,
+              "expectedDisplayName": "무시"
+            },
+            "inputKind": "boolean",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "requires_explicit_animation_edit",
+            "keyframeWrite": "native_type_preflight_required",
+            "emptyAnimationBaseValue": "explicit_preserveEmptyAnimation_required"
+          }
+        },
+        {
+          "paramIndex": 1,
+          "displayName": "밸런스",
+          "value": 0.75,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": true,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 1,
+              "expectedDisplayName": "밸런스"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "requires_explicit_animation_edit",
+            "keyframeWrite": "native_type_preflight_required",
+            "emptyAnimationBaseValue": "explicit_preserveEmptyAnimation_required"
+          }
+        }
+      ],
+      "readbackCoverage": {
+        "opaqueParameterIndices": [],
+        "unverifiedParameterIndices": []
+      }
+    }
+  ],
+  "afterKeys": [
+    {
+      "componentIndex": 0,
+      "displayName": "볼륨",
+      "matchName": "Internal Volume Stereo",
+      "params": [
+        {
+          "paramIndex": 0,
+          "displayName": "음소거",
+          "value": false,
+          "valueKind": "boolean",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 0,
+              "expectedDisplayName": "음소거"
+            },
+            "inputKind": "boolean",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 1,
+          "displayName": "레벨",
+          "value": 0,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [
+            {
+              "ticks": "0",
+              "seconds": 0
+            },
+            {
+              "ticks": "8467200000",
+              "seconds": 0.03333333333333333
+            },
+            {
+              "ticks": "541900800000",
+              "seconds": 2.1333333333333333
+            },
+            {
+              "ticks": "550368000000",
+              "seconds": 2.1666666666666665
+            }
+          ],
+          "keyframeDetails": [
+            {
+              "time": {
+                "ticks": "0",
+                "seconds": 0
+              },
+              "value": 0,
+              "interpolationMode": 0,
+              "interpolation": "linear"
+            },
+            {
+              "time": {
+                "ticks": "8467200000",
+                "seconds": 0.03333333333333333
+              },
+              "value": 0.06309573352336884,
+              "interpolationMode": 0,
+              "interpolation": "linear"
+            },
+            {
+              "time": {
+                "ticks": "541900800000",
+                "seconds": 2.1333333333333333
+              },
+              "value": 0.06309573352336884,
+              "interpolationMode": 0,
+              "interpolation": "linear"
+            },
+            {
+              "time": {
+                "ticks": "550368000000",
+                "seconds": 2.1666666666666665
+              },
+              "value": 0,
+              "interpolationMode": 0,
+              "interpolation": "linear"
+            }
+          ],
+          "timeVarying": true,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 1,
+              "expectedDisplayName": "레벨"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "requires_explicit_animation_edit",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        }
+      ],
+      "readbackCoverage": {
+        "opaqueParameterIndices": [],
+        "unverifiedParameterIndices": []
+      }
+    },
+    {
+      "componentIndex": 1,
+      "displayName": "채널 볼륨",
+      "matchName": "Internal Channel Volume Stereo",
+      "params": [
+        {
+          "paramIndex": 0,
+          "displayName": "무시",
+          "value": false,
+          "valueKind": "boolean",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 0,
+              "expectedDisplayName": "무시"
+            },
+            "inputKind": "boolean",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 1,
+          "displayName": "왼쪽",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 1,
+              "expectedDisplayName": "왼쪽"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 2,
+          "displayName": "오른쪽",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 2,
+              "expectedDisplayName": "오른쪽"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 3,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 3,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 4,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 4,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 5,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 5,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 6,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 6,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 7,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 7,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 8,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 8,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 9,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 9,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 10,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 10,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 11,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 11,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 12,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 12,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 13,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 13,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 14,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 14,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 15,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 15,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 16,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 16,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 17,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 17,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 18,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 18,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 19,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 19,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 20,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 20,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 21,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 21,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 22,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 22,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 23,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 23,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 24,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 24,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 25,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 25,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 26,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 26,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 27,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 27,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 28,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 28,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 29,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 29,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 30,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 30,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 31,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 31,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        },
+        {
+          "paramIndex": 32,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 32,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          }
+        }
+      ],
+      "readbackCoverage": {
+        "opaqueParameterIndices": [],
+        "unverifiedParameterIndices": []
+      }
+    },
+    {
+      "componentIndex": 2,
+      "displayName": "밸런스",
+      "matchName": "Internal Audio Balance",
+      "params": [
+        {
+          "paramIndex": 0,
+          "displayName": "무시",
+          "value": false,
+          "valueKind": "boolean",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": true,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 0,
+              "expectedDisplayName": "무시"
+            },
+            "inputKind": "boolean",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "requires_explicit_animation_edit",
+            "keyframeWrite": "native_type_preflight_required",
+            "emptyAnimationBaseValue": "explicit_preserveEmptyAnimation_required"
+          }
+        },
+        {
+          "paramIndex": 1,
+          "displayName": "밸런스",
+          "value": 0.75,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": true,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 1,
+              "expectedDisplayName": "밸런스"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "requires_explicit_animation_edit",
+            "keyframeWrite": "native_type_preflight_required",
+            "emptyAnimationBaseValue": "explicit_preserveEmptyAnimation_required"
+          }
+        }
+      ],
+      "readbackCoverage": {
+        "opaqueParameterIndices": [],
+        "unverifiedParameterIndices": []
+      }
+    }
+  ],
+  "queried": [
+    {
+      "componentIndex": 0,
+      "displayName": "볼륨",
+      "matchName": "Internal Volume Stereo",
+      "params": [
+        {
+          "paramIndex": 0,
+          "displayName": "음소거",
+          "value": false,
+          "valueKind": "boolean",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 0,
+              "expectedDisplayName": "음소거"
+            },
+            "inputKind": "boolean",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 1,
+          "displayName": "레벨",
+          "value": 0,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [
+            {
+              "ticks": "0",
+              "seconds": 0
+            },
+            {
+              "ticks": "8467200000",
+              "seconds": 0.03333333333333333
+            },
+            {
+              "ticks": "541900800000",
+              "seconds": 2.1333333333333333
+            },
+            {
+              "ticks": "550368000000",
+              "seconds": 2.1666666666666665
+            }
+          ],
+          "keyframeDetails": [
+            {
+              "time": {
+                "ticks": "0",
+                "seconds": 0
+              },
+              "value": 0,
+              "interpolationMode": 0,
+              "interpolation": "linear",
+              "clipTime": {
+                "ticks": "0",
+                "seconds": 0
+              },
+              "timeBasis": "native_source",
+              "sequenceTime": {
+                "ticks": "5893171200000",
+                "seconds": 23.2
+              }
+            },
+            {
+              "time": {
+                "ticks": "8467200000",
+                "seconds": 0.03333333333333333
+              },
+              "value": 0.06309573352336884,
+              "interpolationMode": 0,
+              "interpolation": "linear",
+              "clipTime": {
+                "ticks": "8467200000",
+                "seconds": 0.03333333333333333
+              },
+              "timeBasis": "native_source",
+              "sequenceTime": {
+                "ticks": "5901638400000",
+                "seconds": 23.233333333333334
+              }
+            },
+            {
+              "time": {
+                "ticks": "541900800000",
+                "seconds": 2.1333333333333333
+              },
+              "value": 0.06309573352336884,
+              "interpolationMode": 0,
+              "interpolation": "linear",
+              "clipTime": {
+                "ticks": "541900800000",
+                "seconds": 2.1333333333333333
+              },
+              "timeBasis": "native_source",
+              "sequenceTime": {
+                "ticks": "6435072000000",
+                "seconds": 25.333333333333332
+              }
+            },
+            {
+              "time": {
+                "ticks": "550368000000",
+                "seconds": 2.1666666666666665
+              },
+              "value": 0,
+              "interpolationMode": 0,
+              "interpolation": "linear",
+              "clipTime": {
+                "ticks": "550368000000",
+                "seconds": 2.1666666666666665
+              },
+              "timeBasis": "native_source",
+              "sequenceTime": {
+                "ticks": "6443539200000",
+                "seconds": 25.366666666666667
+              }
+            }
+          ],
+          "timeVarying": true,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 1,
+              "expectedDisplayName": "레벨"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "requires_explicit_animation_edit",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        }
+      ],
+      "readbackCoverage": {
+        "opaqueParameterIndices": [],
+        "unverifiedParameterIndices": []
+      }
+    },
+    {
+      "componentIndex": 1,
+      "displayName": "채널 볼륨",
+      "matchName": "Internal Channel Volume Stereo",
+      "params": [
+        {
+          "paramIndex": 0,
+          "displayName": "무시",
+          "value": false,
+          "valueKind": "boolean",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 0,
+              "expectedDisplayName": "무시"
+            },
+            "inputKind": "boolean",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 1,
+          "displayName": "왼쪽",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 1,
+              "expectedDisplayName": "왼쪽"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 2,
+          "displayName": "오른쪽",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 2,
+              "expectedDisplayName": "오른쪽"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 3,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 3,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 4,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 4,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 5,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 5,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 6,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 6,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 7,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 7,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 8,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 8,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 9,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 9,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 10,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 10,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 11,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 11,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 12,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 12,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 13,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 13,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 14,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 14,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 15,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 15,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 16,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 16,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 17,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 17,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 18,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 18,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 19,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 19,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 20,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 20,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 21,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 21,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 22,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 22,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 23,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 23,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 24,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 24,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 25,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 25,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 26,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 26,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 27,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 27,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 28,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 28,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 29,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 29,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 30,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 30,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 31,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 31,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 32,
+          "displayName": "",
+          "value": 0.17782793939113617,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": false,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 32,
+              "expectedDisplayName": ""
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "preflight_required",
+            "keyframeWrite": "native_type_preflight_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        }
+      ],
+      "readbackCoverage": {
+        "opaqueParameterIndices": [],
+        "unverifiedParameterIndices": []
+      }
+    },
+    {
+      "componentIndex": 2,
+      "displayName": "밸런스",
+      "matchName": "Internal Audio Balance",
+      "params": [
+        {
+          "paramIndex": 0,
+          "displayName": "무시",
+          "value": false,
+          "valueKind": "boolean",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": true,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 0,
+              "expectedDisplayName": "무시"
+            },
+            "inputKind": "boolean",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "requires_explicit_animation_edit",
+            "keyframeWrite": "native_type_preflight_required",
+            "emptyAnimationBaseValue": "explicit_preserveEmptyAnimation_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        },
+        {
+          "paramIndex": 1,
+          "displayName": "밸런스",
+          "value": 0.75,
+          "valueKind": "number",
+          "nativeValueType": null,
+          "valueReadMethod": "getValueAtTime",
+          "keyframes": [],
+          "keyframeDetails": [],
+          "timeVarying": true,
+          "supportsKeyframes": true,
+          "sampledAt": {
+            "ticks": "0",
+            "seconds": 0
+          },
+          "sampleTimeBasis": "native_component",
+          "readStatus": {
+            "value": "pass",
+            "animation": "pass"
+          },
+          "readErrors": [],
+          "descriptor": {
+            "selector": {
+              "paramIndex": 1,
+              "expectedDisplayName": "밸런스"
+            },
+            "inputKind": "number",
+            "semanticRole": null,
+            "unit": null,
+            "range": null,
+            "choices": null,
+            "boundsSource": "not_exposed_by_public_uxp",
+            "staticWrite": "requires_explicit_animation_edit",
+            "keyframeWrite": "native_type_preflight_required",
+            "emptyAnimationBaseValue": "explicit_preserveEmptyAnimation_required"
+          },
+          "sampledSequenceTime": {
+            "ticks": "5893171200000",
+            "seconds": 23.2
+          },
+          "timeMapping": "source_to_sequence_1x"
+        }
+      ],
+      "readbackCoverage": {
+        "opaqueParameterIndices": [],
+        "unverifiedParameterIndices": []
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "paramIndex": 1,
+      "expectedDisplayName": "밸런스",
+      "value": 0.75,
+      "expectedValue": 0.75
+    }
+  ],
+  "keyframes": [
+    {
+      "paramIndex": 1,
+      "expectedDisplayName": "레벨",
+      "timeTicks": "5893171200000",
+      "value": 0,
+      "interpolation": "linear"
+    },
+    {
+      "paramIndex": 1,
+      "expectedDisplayName": "레벨",
+      "timeTicks": "5901638400000",
+      "value": 0.06309573444801933,
+      "interpolation": "linear"
+    },
+    {
+      "paramIndex": 1,
+      "expectedDisplayName": "레벨",
+      "timeTicks": "6435072000000",
+      "value": 0.06309573444801933,
+      "interpolation": "linear"
+    },
+    {
+      "paramIndex": 1,
+      "expectedDisplayName": "레벨",
+      "timeTicks": "6443539200000",
+      "value": 0,
+      "interpolation": "linear"
+    }
+  ]
+}

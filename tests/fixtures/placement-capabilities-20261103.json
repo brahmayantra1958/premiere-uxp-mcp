@@ -1,0 +1,173 @@
+{
+  "premiereVersion": "26.5.2",
+  "uxpVersion": "uxp-9.3.0-local",
+  "runtimeCompatibility": {
+    "requiredPremiereVersion": "26.3.0",
+    "status": "compatible"
+  },
+  "hostContext": {
+    "activeProject": true,
+    "activeSequence": true
+  },
+  "read": [
+    {
+      "name": "programMonitorFrame",
+      "supported": true
+    },
+    {
+      "name": "project",
+      "supported": true
+    },
+    {
+      "name": "sequence",
+      "supported": true
+    },
+    {
+      "name": "tracks",
+      "supported": true
+    },
+    {
+      "name": "media",
+      "supported": true
+    },
+    {
+      "name": "proxies",
+      "supported": true
+    },
+    {
+      "name": "markers",
+      "supported": true
+    },
+    {
+      "name": "effects",
+      "supported": true
+    },
+    {
+      "name": "timelineSelection",
+      "supported": true
+    },
+    {
+      "name": "objectMaskPresence",
+      "supported": true
+    },
+    {
+      "name": "clipSpeechText",
+      "supported": true
+    }
+  ],
+  "write": [
+    {
+      "name": "nativeToolActivation",
+      "supported": true
+    },
+    {
+      "name": "nativeMaskInspectionAndTracking",
+      "supported": true
+    },
+    {
+      "name": "nativeEffectSectionScroll",
+      "supported": true
+    },
+    {
+      "name": "trackTargeting",
+      "supported": true
+    },
+    {
+      "name": "trackLocks",
+      "supported": false
+    },
+    {
+      "name": "timelineNavigation",
+      "supported": true
+    },
+    {
+      "name": "saveAs",
+      "supported": true
+    },
+    {
+      "name": "sequenceClone",
+      "supported": true
+    },
+    {
+      "name": "mediaImport",
+      "supported": true
+    },
+    {
+      "name": "projectPanelOrganization",
+      "supported": true
+    },
+    {
+      "name": "sequenceEditor",
+      "supported": true
+    },
+    {
+      "name": "nativeCaptionTrackImport",
+      "supported": false
+    },
+    {
+      "name": "clipSpeechTextImport",
+      "supported": true
+    },
+    {
+      "name": "trackAndClipState",
+      "supported": true
+    },
+    {
+      "name": "timelineSelection",
+      "supported": true
+    },
+    {
+      "name": "clipClone",
+      "supported": true
+    },
+    {
+      "name": "clipTrackRelocation",
+      "supported": true
+    },
+    {
+      "name": "exactClipTrim",
+      "supported": true
+    },
+    {
+      "name": "clipSplitByCloneTrimMove",
+      "supported": true
+    },
+    {
+      "name": "nativeSceneEditDetection",
+      "supported": true
+    },
+    {
+      "name": "mogrt",
+      "supported": true
+    },
+    {
+      "name": "proxyAttach",
+      "supported": true
+    },
+    {
+      "name": "markers",
+      "supported": true
+    },
+    {
+      "name": "transitions",
+      "supported": true
+    },
+    {
+      "name": "videoEffects",
+      "supported": true
+    },
+    {
+      "name": "audioEffects",
+      "supported": true
+    },
+    {
+      "name": "effectKeyframes",
+      "supported": true
+    },
+    {
+      "name": "export",
+      "supported": true
+    }
+  ],
+  "unsupported": []
+}

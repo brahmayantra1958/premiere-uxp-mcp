@@ -1,0 +1,62 @@
+{
+  "name": "@premiere-uxp/contracts",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./read-purpose": {
+      "types": "./dist/read-purpose.d.ts",
+      "import": "./dist/read-purpose.js"
+    },
+    "./effect-native-sample": {
+      "types": "./dist/effect-native-sample.d.ts",
+      "import": "./dist/effect-native-sample.js"
+    },
+    "./effect-chain-proof": {
+      "types": "./dist/effect-chain-proof.d.ts",
+      "import": "./dist/effect-chain-proof.js"
+    },
+    "./effect-state": {
+      "types": "./dist/effect-state.d.ts",
+      "import": "./dist/effect-state.js"
+    },
+    "./effect-insertion": {
+      "types": "./dist/effect-insertion.d.ts",
+      "import": "./dist/effect-insertion.js"
+    },
+    "./mask-tracking": {
+      "types": "./dist/mask-tracking.d.ts",
+      "import": "./dist/mask-tracking.js"
+    },
+    "./effect-disclosure": {
+      "types": "./dist/effect-disclosure.d.ts",
+      "import": "./dist/effect-disclosure.js"
+    },
+    "./panel-work": {
+      "types": "./dist/panel-work.d.ts",
+      "import": "./dist/panel-work.js"
+    },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./ripple-plan": {
+      "types": "./dist/ripple-plan.d.ts",
+      "import": "./dist/ripple-plan.js"
+    },
+    "./local-path": {
+      "types": "./dist/local-path.d.ts",
+      "import": "./dist/local-path.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
+  },
+  "license": "0BSD"
+}

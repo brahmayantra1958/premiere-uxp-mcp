@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "allowJs": false,
+    "isolatedModules": true,
+    "types": ["@adobe/cc-ext-uxp-types", "@adobe/premierepro"],
+    "lib": ["ESNext", "DOM"]
+  },
+  "include": ["index.ts", "src/**/*.ts"]
+}

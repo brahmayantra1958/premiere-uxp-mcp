@@ -1,0 +1,6 @@
+interface:
+  display_name: "Premiere MCP 영상 편집"
+  short_description: "현재 대상을 고정해 필요한 편집과 호스트 검증을 수행"
+  default_prompt: "$USER-video-edit-premiere을 적용해 요청한 Premiere 작업을 진행해줘."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Premiere 연결·복구"
+  short_description: "첫 설치·설정부터 MCP 재연결·UDT Reload·실행 장애까지 진단"
+  default_prompt: "$USER-premiere-connect-recover을 적용해 요청한 Premiere 작업을 진행해줘."
+policy:
+  allow_implicit_invocation: true

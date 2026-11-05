@@ -1,0 +1,6 @@
+interface:
+  display_name: "USER-computer-use-manage-memory"
+  short_description: "UI 작업 때만 켜고 전환·대기·오류·완료 시 세션을 정리"
+  default_prompt: "$USER-computer-use-manage-memory을 적용해 실제 UI 작업 때만 Computer Use를 켜고 다른 작업이나 대기로 전환하기 전에 지원되는 자원을 정리해줘."
+policy:
+  allow_implicit_invocation: true

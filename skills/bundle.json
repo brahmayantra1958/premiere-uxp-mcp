@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.12",
+  "contractVersion": "1.0.0",
+  "minimumPanelVersion": "0.15.0",
+  "skills": [
+    {
+      "name": "USER-video-edit-premiere",
+      "version": "1.0.10"
+    },
+    {
+      "name": "USER-video-preserve-editability-premiere",
+      "version": "1.0.2"
+    },
+    {
+      "name": "USER-premiere-connect-recover",
+      "version": "1.0.3"
+    },
+    {
+      "name": "USER-computer-use-manage-memory",
+      "version": "1.0.0"
+    }
+  ],
+  "documents": [
+    "docs/agent-instructions.md",
+    "docs/agent-contract.md",
+    "docs/agent-start-here.md",
+    "docs/operator-runbook.md",
+    "docs/domain-model.md",
+    "docs/tool-catalog.md",
+    "docs/installation.md",
+    "docs/native-addons.md",
+    "docs/release-status.md",
+    "docs/examples/agent-calls.json",
+    "skills/README.md",
+    "skills/bundle.json",
+    "docs/source-editability-20261018.md"
+  ],
+  "resources": [
+    {
+      "name": "contract",
+      "path": "docs/agent-contract.md",
+      "description": "Current target, editability, execution, proof and recovery contract."
+    },
+    {
+      "name": "start",
+      "path": "docs/agent-start-here.md",
+      "description": "Minimal connection, discovery and execution flow."
+    },
+    {
+      "name": "installation",
+      "path": "docs/installation.md",
+      "description": "Installation, profiles, platform prerequisites and skill setup."
+    },
+    {
+      "name": "support",
+      "path": "docs/release-status.md",
+      "description": "Dependency and live-proof limits by feature and platform."
+    },
+    {
+      "name": "native-addons",
+      "path": "docs/native-addons.md",
+      "description": "Optional native SDK build, installation, verification and redistribution boundaries."
+    },
+    {
+      "name": "targets-media",
+      "path": "skills/USER-video-edit-premiere/references/targets-media.md",
+      "description": "Read only when working on targets-media."
+    },
+    {
+      "name": "execution-recipes",
+      "path": "skills/USER-video-edit-premiere/references/execution-recipes.md",
+      "description": "Read only when working on execution-recipes."
+    },
+    {
+      "name": "motion-reframe",
+      "path": "skills/USER-video-edit-premiere/references/motion-reframe.md",
+      "description": "Read only when working on motion-reframe."
+    },
+    {
+      "name": "jobs-events",
+      "path": "skills/USER-video-edit-premiere/references/jobs-events.md",
+      "description": "Read only when working on jobs-events."
+    },
+    {
+      "name": "timeline",
+      "path": "skills/USER-video-edit-premiere/references/timeline.md",
+      "description": "Read only when working on timeline."
+    },
+    {
+      "name": "effects",
+      "path": "skills/USER-video-edit-premiere/references/effects.md",
+      "description": "Read only when working on effects."
+    },
+    {
+      "name": "captions-graphics",
+      "path": "skills/USER-video-edit-premiere/references/captions-graphics.md",
+      "description": "Read only when working on captions-graphics."
+    },
+    {
+      "name": "masks-native",
+      "path": "skills/USER-video-edit-premiere/references/masks-native.md",
+      "description": "Read only when working on masks-native."
+    },
+    {
+      "name": "recovery",
+      "path": "skills/USER-video-edit-premiere/references/recovery.md",
+      "description": "Read only when working on recovery."
+    },
+    {
+      "name": "verify-deliver",
+      "path": "skills/USER-video-edit-premiere/references/verify-deliver.md",
+      "description": "Read only when working on verify-deliver."
+    },
+    {
+      "name": "editability",
+      "path": "skills/USER-video-preserve-editability-premiere/SKILL.md",
+      "description": "Preserve original timing, audio and future reframing."
+    },
+    {
+      "name": "connect-recover",
+      "path": "skills/USER-premiere-connect-recover/SKILL.md",
+      "description": "First installation, settings, connection, deployment and uncertain-operation diagnosis."
+    },
+    {
+      "name": "computer-use",
+      "path": "skills/USER-computer-use-manage-memory/SKILL.md",
+      "description": "Conditional UI-session activation and cleanup."
+    },
+    {
+      "name": "operate",
+      "path": "skills/USER-video-edit-premiere/SKILL.md",
+      "description": "Main operating skill and task-specific routing."
+    },
+    {
+      "name": "tools",
+      "path": "docs/tool-catalog.md",
+      "description": "Choose a tool by editing intent and proof boundary."
+    },
+    {
+      "name": "domain-model",
+      "path": "docs/domain-model.md",
+      "description": "Implementation identities and invariants."
+    },
+    {
+      "name": "operator-runbook",
+      "path": "docs/operator-runbook.md",
+      "description": "Environment and recovery runbook."
+    },
+    {
+      "name": "skills",
+      "path": "skills/README.md",
+      "description": "Install and synchronize the bundled skills."
+    },
+    {
+      "name": "examples",
+      "path": "docs/examples/agent-calls.json",
+      "description": "Schema-validated templates; never an executable job."
+    },
+    {
+      "name": "bundle",
+      "path": "skills/bundle.json",
+      "description": "Guidance versions, resources and optional dependencies."
+    },
+    {
+      "name": "setup-checks",
+      "path": "skills/USER-premiere-connect-recover/references/setup.md",
+      "description": "Portable first-install, settings, MCP registration and skill-discovery checklist."
+    },
+    {
+      "name": "reload-checks",
+      "path": "skills/USER-premiere-connect-recover/references/reload-recovery.md",
+      "description": "Choose stdio reconnect, owner restart, UDT Reload or helper installation from evidence."
+    },
+    {
+      "name": "source-editability",
+      "path": "docs/source-editability-20261018.md",
+      "description": "Original-file source ranges, handles, rendered proof and safe replacement limits."
+    }
+  ],
+  "optionalFeatures": {
+    "trackLocks": {
+      "minimumPanelVersion": "0.15.1",
+      "helper": "ai.brahma.yantra.track-lock",
+      "liveProof": "UNVERIFIED"
+    },
+    "nativeVideoTime": {
+      "platform": "win32",
+      "dependency": "separately installed Adobe Native Read SDK adapter"
+    },
+    "nativeVisual": {
+      "platform": "win32",
+      "dependency": "feature-specific C# and Adobe SDK adapters"
+    },
+    "captions": {
+      "dependency": "version-matched caption helper; inspect installed manifest and live heartbeat"
+    }
+  }
+}

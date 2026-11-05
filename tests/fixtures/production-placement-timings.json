@@ -1,0 +1,618 @@
+[
+  {
+    "operation": "df59f158",
+    "mediaType": "video",
+    "expectedSeconds": 10.0416666667,
+    "frameTicks": "8475667200",
+    "actualTicks": "2542700160000"
+  },
+  {
+    "operation": "df59f158",
+    "mediaType": "audio",
+    "expectedSeconds": 10.0416666667,
+    "frameTicks": "8475667200",
+    "actualTicks": "2542700160000"
+  },
+  {
+    "operation": "f08066ec",
+    "mediaType": "audio",
+    "expectedSeconds": 3.599206349206349,
+    "frameTicks": "8475667200",
+    "actualTicks": "906896390400"
+  },
+  {
+    "operation": "ecd5cdde",
+    "mediaType": "video",
+    "expectedSeconds": 7,
+    "frameTicks": "8475667200",
+    "actualTicks": "1771414444800"
+  },
+  {
+    "operation": "ecd5cdde",
+    "mediaType": "audio",
+    "expectedSeconds": 7,
+    "frameTicks": "8475667200",
+    "actualTicks": "1771414444800"
+  },
+  {
+    "operation": "c5023a9a",
+    "mediaType": "audio",
+    "expectedSeconds": 7.941,
+    "frameTicks": "8475667200",
+    "actualTicks": "2008733126400"
+  },
+  {
+    "operation": "c5023a9a",
+    "mediaType": "audio",
+    "expectedSeconds": 2.469,
+    "frameTicks": "8475667200",
+    "actualTicks": "618723705600"
+  },
+  {
+    "operation": "c5023a9a",
+    "mediaType": "audio",
+    "expectedSeconds": 3.47,
+    "frameTicks": "8475667200",
+    "actualTicks": "872993721600"
+  },
+  {
+    "operation": "c5023a9a",
+    "mediaType": "audio",
+    "expectedSeconds": 5.372,
+    "frameTicks": "8475667200",
+    "actualTicks": "1356106752000"
+  },
+  {
+    "operation": "c5023a9a",
+    "mediaType": "audio",
+    "expectedSeconds": 0.934,
+    "frameTicks": "8475667200",
+    "actualTicks": "228843014400"
+  },
+  {
+    "operation": "c5023a9a",
+    "mediaType": "audio",
+    "expectedSeconds": 6.039,
+    "frameTicks": "8475667200",
+    "actualTicks": "1525620096000"
+  },
+  {
+    "operation": "c5023a9a",
+    "mediaType": "audio",
+    "expectedSeconds": 4.738,
+    "frameTicks": "8475667200",
+    "actualTicks": "1195069075200"
+  },
+  {
+    "operation": "c5023a9a",
+    "mediaType": "audio",
+    "expectedSeconds": 5.038,
+    "frameTicks": "8475667200",
+    "actualTicks": "1271350080000"
+  },
+  {
+    "operation": "c5023a9a",
+    "mediaType": "audio",
+    "expectedSeconds": 3.136,
+    "frameTicks": "8475667200",
+    "actualTicks": "788237049600"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 8.407,
+    "frameTicks": "10594584000",
+    "actualTicks": "2129511384000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 4.487,
+    "frameTicks": "10594584000",
+    "actualTicks": "1133620488000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 12.0945,
+    "frameTicks": "10594584000",
+    "actualTicks": "3061834776000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 2.152,
+    "frameTicks": "10594584000",
+    "actualTicks": "540323784000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 3.7875,
+    "frameTicks": "10594584000",
+    "actualTicks": "953512560000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 6.2395,
+    "frameTicks": "10594584000",
+    "actualTicks": "1578593016000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 12.329,
+    "frameTicks": "10594584000",
+    "actualTicks": "3125402280000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 12.0115,
+    "frameTicks": "10594584000",
+    "actualTicks": "3040645608000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 2.703,
+    "frameTicks": "10594584000",
+    "actualTicks": "678053376000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 9.6595,
+    "frameTicks": "10594584000",
+    "actualTicks": "2447348904000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 4.705,
+    "frameTicks": "10594584000",
+    "actualTicks": "1186593408000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 1.9015,
+    "frameTicks": "10594584000",
+    "actualTicks": "476756280000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 4.0375,
+    "frameTicks": "10594584000",
+    "actualTicks": "1017080064000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 9.7595,
+    "frameTicks": "10594584000",
+    "actualTicks": "2468538072000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 6.54,
+    "frameTicks": "10594584000",
+    "actualTicks": "1652755104000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 1.151,
+    "frameTicks": "10594584000",
+    "actualTicks": "286053768000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 6.506,
+    "frameTicks": "10594584000",
+    "actualTicks": "1642160520000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 1.3345,
+    "frameTicks": "10594584000",
+    "actualTicks": "317837520000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 1.3345,
+    "frameTicks": "10594584000",
+    "actualTicks": "317837520000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 1.6185,
+    "frameTicks": "10594584000",
+    "actualTicks": "402594192000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 6.2395,
+    "frameTicks": "10594584000",
+    "actualTicks": "1578593016000"
+  },
+  {
+    "operation": "13b310f4",
+    "mediaType": "audio",
+    "expectedSeconds": 4.2875,
+    "frameTicks": "10594584000",
+    "actualTicks": "1080647568000"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 5.47,
+    "frameTicks": "8475667200",
+    "actualTicks": "1381533753600"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 3.19,
+    "frameTicks": "8475667200",
+    "actualTicks": "805188384000"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 5.63,
+    "frameTicks": "8475667200",
+    "actualTicks": "1423912089600"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 6.2,
+    "frameTicks": "8475667200",
+    "actualTicks": "1567998432000"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 4.27,
+    "frameTicks": "8475667200",
+    "actualTicks": "1076409734400"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 5.8,
+    "frameTicks": "8475667200",
+    "actualTicks": "1466290425600"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 5.7,
+    "frameTicks": "8475667200",
+    "actualTicks": "1440863424000"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 13.68,
+    "frameTicks": "8475667200",
+    "actualTicks": "3466547884800"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 3.87,
+    "frameTicks": "8475667200",
+    "actualTicks": "974701728000"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 8.8,
+    "frameTicks": "8475667200",
+    "actualTicks": "2229100473600"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 5.2,
+    "frameTicks": "8475667200",
+    "actualTicks": "1313728416000"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 5.96,
+    "frameTicks": "8475667200",
+    "actualTicks": "1508668761600"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 4.83,
+    "frameTicks": "8475667200",
+    "actualTicks": "1220496076800"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 4.36,
+    "frameTicks": "8475667200",
+    "actualTicks": "1101836736000"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 8.94,
+    "frameTicks": "8475667200",
+    "actualTicks": "2263003142400"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 8.43,
+    "frameTicks": "8475667200",
+    "actualTicks": "2135868134400"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 12.9,
+    "frameTicks": "8475667200",
+    "actualTicks": "3271607539200"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 8.73,
+    "frameTicks": "8475667200",
+    "actualTicks": "2212149139200"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 2.72,
+    "frameTicks": "8475667200",
+    "actualTicks": "686529043200"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 3.79,
+    "frameTicks": "8475667200",
+    "actualTicks": "957750393600"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 5.9,
+    "frameTicks": "8475667200",
+    "actualTicks": "1491717427200"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 9.13,
+    "frameTicks": "8475667200",
+    "actualTicks": "2313857145600"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 5.46,
+    "frameTicks": "8475667200",
+    "actualTicks": "1381533753600"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 14.21,
+    "frameTicks": "8475667200",
+    "actualTicks": "3602158560000"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 14.98,
+    "frameTicks": "8475667200",
+    "actualTicks": "3797098905600"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 4.9,
+    "frameTicks": "8475667200",
+    "actualTicks": "1237447411200"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 6.19,
+    "frameTicks": "8475667200",
+    "actualTicks": "1567998432000"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 4.17,
+    "frameTicks": "8475667200",
+    "actualTicks": "1050982732800"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 10.17,
+    "frameTicks": "8475667200",
+    "actualTicks": "2576602828800"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 13.4,
+    "frameTicks": "8475667200",
+    "actualTicks": "3398742547200"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 2.26,
+    "frameTicks": "8475667200",
+    "actualTicks": "567869702400"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 14.07,
+    "frameTicks": "8475667200",
+    "actualTicks": "3568255891200"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 11.94,
+    "frameTicks": "8475667200",
+    "actualTicks": "3025813190400"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 7.54,
+    "frameTicks": "8475667200",
+    "actualTicks": "1907025120000"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 16.67,
+    "frameTicks": "8475667200",
+    "actualTicks": "4229357932800"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 5.86,
+    "frameTicks": "8475667200",
+    "actualTicks": "1483241760000"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 9.94,
+    "frameTicks": "8475667200",
+    "actualTicks": "2517273158400"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 12.33,
+    "frameTicks": "8475667200",
+    "actualTicks": "3127521196800"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 6.43,
+    "frameTicks": "8475667200",
+    "actualTicks": "1627328102400"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 8.44,
+    "frameTicks": "8475667200",
+    "actualTicks": "2135868134400"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 16.41,
+    "frameTicks": "8475667200",
+    "actualTicks": "4161552595200"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 15.91,
+    "frameTicks": "8475667200",
+    "actualTicks": "4034417587200"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 5.36,
+    "frameTicks": "8475667200",
+    "actualTicks": "1356106752000"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 12.07,
+    "frameTicks": "8475667200",
+    "actualTicks": "3059715859200"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 12.11,
+    "frameTicks": "8475667200",
+    "actualTicks": "3068191526400"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 10.84,
+    "frameTicks": "8475667200",
+    "actualTicks": "2746116172800"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 4.47,
+    "frameTicks": "8475667200",
+    "actualTicks": "1127263737600"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 5.79,
+    "frameTicks": "8475667200",
+    "actualTicks": "1466290425600"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 27.39,
+    "frameTicks": "8475667200",
+    "actualTicks": "6950047104000"
+  },
+  {
+    "operation": "07db6563",
+    "mediaType": "audio",
+    "expectedSeconds": 9.56,
+    "frameTicks": "8475667200",
+    "actualTicks": "2424040819200"
+  },
+  {
+    "operation": "de4b2e55",
+    "mediaType": "audio",
+    "expectedSeconds": 224.413,
+    "frameTicks": "8475667200",
+    "actualTicks": "56998861920000"
+  },
+  {
+    "operation": "386a48c0",
+    "mediaType": "video",
+    "expectedSeconds": 12,
+    "frameTicks": "10594584000",
+    "actualTicks": "3040645608000"
+  }
+]

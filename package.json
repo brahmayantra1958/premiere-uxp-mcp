@@ -1,0 +1,48 @@
+{
+  "name": "premiere-uxp-mcp",
+  "version": "0.3.17",
+  "private": true,
+  "description": "UXP-first, readback-verified MCP automation for Adobe Premiere Pro 2026.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build:native-bridge && npm run build -w @premiere-uxp/contracts && npm run build -w @premiere-uxp/mcp-server && npm run build -w @premiere-uxp/uxp-plugin",
+    "build:native-bridge": "node scripts/runtime/build-platform-bridges.mjs",
+    "typecheck": "npm run build -w @premiere-uxp/contracts && npm run typecheck -w @premiere-uxp/mcp-server && npm run typecheck -w @premiere-uxp/uxp-plugin",
+    "lint": "eslint .",
+    "test": "npm run build -w @premiere-uxp/contracts && npm run build -w @premiere-uxp/mcp-server && vitest run",
+    "test:watch": "vitest",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build",
+    "start": "npm run start -w @premiere-uxp/mcp-server",
+    "start:pair": "npm run start -w @premiere-uxp/mcp-server -- --approve-next-project",
+    "start:ready": "node apps/mcp-server/dist/runtime-cli.js ready",
+    "runtime:status": "node apps/mcp-server/dist/runtime-cli.js status",
+    "runtime:stop": "node apps/mcp-server/dist/runtime-cli.js stop",
+    "dev:server": "npm run dev -w @premiere-uxp/mcp-server",
+    "dev:plugin": "npm run dev -w @premiere-uxp/uxp-plugin",
+    "package:release": "node scripts/distribution/package-release.mjs",
+    "install:prepare": "node installer/install.mjs --prepare-only",
+    "guidance:check": "node scripts/distribution/validate-guidance.mjs",
+    "skills:install": "node installer/install-skills.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.10.1",
+    "eslint": "^10.14.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.72.1",
+    "vitest": "^4.1.12"
+  },
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "license": "0BSD",
+  "dependencies": {
+    "smol-toml": "^1.9.1"
+  },
+  "overrides": {
+    "minimatch@^10.2.2": "11.0.4"
+  }
+}

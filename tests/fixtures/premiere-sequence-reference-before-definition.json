@@ -1,0 +1,36 @@
+{
+  "source": "A project saved by Premiere Pro 2026 during a live dry run. The project itself is not distributed.",
+  "description": "Exact Audio/VideoSequenceSource blocks and paired Sequence definition openings/names extracted read-only. Tests supply independent synthetic track bodies; media paths, original full project and caption binary contents are not copied.",
+  "references": [
+    "<AudioSequenceSource ObjectID=\"66\" ClassID=\"e8d4cc83-38cb-491f-9d94-e5f7e3b205ee\" Version=\"7\">\n\t\t<SequenceSource Version=\"4\">\n\t\t\t<Content Version=\"10\">\n\t\t\t</Content>\n\t\t\t<Sequence ObjectURef=\"52ef22ae-33a3-49fd-b4ad-31dd60797676\"/>\n\t\t</SequenceSource>\n\t\t<OriginalDuration>2627456832000</OriginalDuration>\n\t</AudioSequenceSource>",
+    "<VideoSequenceSource ObjectID=\"69\" ClassID=\"4752dfa9-7a7e-4a3b-a25b-cafde1a8d036\" Version=\"3\">\n\t\t<SequenceSource Version=\"4\">\n\t\t\t<Content Version=\"10\">\n\t\t\t</Content>\n\t\t\t<Sequence ObjectURef=\"52ef22ae-33a3-49fd-b4ad-31dd60797676\"/>\n\t\t</SequenceSource>\n\t\t<OriginalDuration>2627456832000</OriginalDuration>\n\t</VideoSequenceSource>",
+    "<AudioSequenceSource ObjectID=\"106\" ClassID=\"e8d4cc83-38cb-491f-9d94-e5f7e3b205ee\" Version=\"7\">\n\t\t<SequenceSource Version=\"4\">\n\t\t\t<Content Version=\"10\">\n\t\t\t</Content>\n\t\t\t<Sequence ObjectURef=\"fe485d67-6218-4092-a041-bab56bcb68d0\"/>\n\t\t</SequenceSource>\n\t\t<OriginalDuration>4439130696000</OriginalDuration>\n\t</AudioSequenceSource>",
+    "<VideoSequenceSource ObjectID=\"109\" ClassID=\"4752dfa9-7a7e-4a3b-a25b-cafde1a8d036\" Version=\"3\">\n\t\t<SequenceSource Version=\"4\">\n\t\t\t<Content Version=\"10\">\n\t\t\t</Content>\n\t\t\t<Sequence ObjectURef=\"fe485d67-6218-4092-a041-bab56bcb68d0\"/>\n\t\t</SequenceSource>\n\t\t<OriginalDuration>4439130696000</OriginalDuration>\n\t</VideoSequenceSource>",
+    "<AudioSequenceSource ObjectID=\"111\" ClassID=\"e8d4cc83-38cb-491f-9d94-e5f7e3b205ee\" Version=\"7\">\n\t\t<SequenceSource Version=\"4\">\n\t\t\t<Content Version=\"10\">\n\t\t\t</Content>\n\t\t\t<Sequence ObjectURef=\"6c912240-9b6a-41d8-9bfd-162c0bd59bd6\"/>\n\t\t</SequenceSource>\n\t\t<OriginalDuration>0</OriginalDuration>\n\t</AudioSequenceSource>",
+    "<VideoSequenceSource ObjectID=\"114\" ClassID=\"4752dfa9-7a7e-4a3b-a25b-cafde1a8d036\" Version=\"3\">\n\t\t<SequenceSource Version=\"4\">\n\t\t\t<Content Version=\"10\">\n\t\t\t</Content>\n\t\t\t<Sequence ObjectURef=\"6c912240-9b6a-41d8-9bfd-162c0bd59bd6\"/>\n\t\t</SequenceSource>\n\t\t<OriginalDuration>0</OriginalDuration>\n\t</VideoSequenceSource>",
+    "<AudioSequenceSource ObjectID=\"116\" ClassID=\"e8d4cc83-38cb-491f-9d94-e5f7e3b205ee\" Version=\"7\">\n\t\t<SequenceSource Version=\"4\">\n\t\t\t<Content Version=\"10\">\n\t\t\t</Content>\n\t\t\t<Sequence ObjectURef=\"8604a156-2567-4b6d-9590-8df65990a58f\"/>\n\t\t</SequenceSource>\n\t\t<OriginalDuration>4439130696000</OriginalDuration>\n\t</AudioSequenceSource>",
+    "<VideoSequenceSource ObjectID=\"119\" ClassID=\"4752dfa9-7a7e-4a3b-a25b-cafde1a8d036\" Version=\"3\">\n\t\t<SequenceSource Version=\"4\">\n\t\t\t<Content Version=\"10\">\n\t\t\t</Content>\n\t\t\t<Sequence ObjectURef=\"8604a156-2567-4b6d-9590-8df65990a58f\"/>\n\t\t</SequenceSource>\n\t\t<OriginalDuration>4439130696000</OriginalDuration>\n\t</VideoSequenceSource>"
+  ],
+  "sequences": [
+    {
+      "uid": "52ef22ae-33a3-49fd-b4ad-31dd60797676",
+      "name": "Premiere UXP MCP",
+      "definitionOpen": "<Sequence ObjectUID=\"52ef22ae-33a3-49fd-b4ad-31dd60797676\" ClassID=\"6a15d903-8739-11d5-af2d-9b7855ad8974\" Version=\"12\">"
+    },
+    {
+      "uid": "fe485d67-6218-4092-a041-bab56bcb68d0",
+      "name": "1080p 23.98",
+      "definitionOpen": "<Sequence ObjectUID=\"fe485d67-6218-4092-a041-bab56bcb68d0\" ClassID=\"6a15d903-8739-11d5-af2d-9b7855ad8974\" Version=\"12\">"
+    },
+    {
+      "uid": "6c912240-9b6a-41d8-9bfd-162c0bd59bd6",
+      "name": "UHD 4K 23.98",
+      "definitionOpen": "<Sequence ObjectUID=\"6c912240-9b6a-41d8-9bfd-162c0bd59bd6\" ClassID=\"6a15d903-8739-11d5-af2d-9b7855ad8974\" Version=\"12\">"
+    },
+    {
+      "uid": "8604a156-2567-4b6d-9590-8df65990a58f",
+      "name": "Premiere UXP MCP 완성본",
+      "definitionOpen": "<Sequence ObjectUID=\"8604a156-2567-4b6d-9590-8df65990a58f\" ClassID=\"6a15d903-8739-11d5-af2d-9b7855ad8974\" Version=\"12\">"
+    }
+  ]
+}

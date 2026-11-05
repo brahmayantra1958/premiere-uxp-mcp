@@ -1,0 +1,301 @@
+{
+  "kind": "template_only_not_a_job",
+  "instructions": "Do not execute this array. IDs, UUIDs, names, indices, times and values are illustrative placeholders. Substitute fresh inspected state and the user request. Shared dummy UUIDs across examples are not reusable IDs for real work.",
+  "examples": [
+    {
+      "id": "orientation",
+      "tool": "get_agent_context",
+      "arguments": {},
+      "note": "Fresh orientation. When known, pin the authorized project/sequence IDs."
+    },
+    {
+      "id": "deployment",
+      "tool": "premiere_ping",
+      "arguments": {},
+      "note": "Check premiere.deployment, not the MCP package version."
+    },
+    {
+      "id": "recovery-status",
+      "tool": "get_mutation_recovery",
+      "arguments": {},
+      "note": "Before the first edit in a new session and after uncertainty."
+    },
+    {
+      "id": "find-clips",
+      "tool": "query_timeline",
+      "arguments": {
+        "expectedProjectId": "<context.project.id>",
+        "expectedSequenceId": "<context.sequence.id>",
+        "nameContains": "<requested-clip-name>",
+        "limit": 5,
+        "includeEffects": false
+      },
+      "note": "A page is not a complete timeline. Check page.hasMore and scanTruncated."
+    },
+    {
+      "id": "discover-effects",
+      "tool": "query_timeline",
+      "arguments": {
+        "expectedProjectId": "<context.project.id>",
+        "expectedSequenceId": "<context.sequence.id>",
+        "ids": [
+          "<item.id>"
+        ],
+        "limit": 1,
+        "includeEffects": true
+      },
+      "note": "Discover exact component and parameter selectors on the requested clip."
+    },
+    {
+      "id": "find-media",
+      "tool": "query_media",
+      "arguments": {
+        "expectedProjectId": "<context.project.id>",
+        "nameContains": "<requested-source-name>",
+        "limit": 5,
+        "expectedSequenceId": "<context.sequence.id>"
+      },
+      "note": "Follows the first result in the Project panel; no source-folder scan."
+    },
+    {
+      "id": "read-parameter",
+      "tool": "get_effect_values",
+      "arguments": {
+        "expectedProjectId": "<context.project.id>",
+        "expectedSequenceId": "<context.sequence.id>",
+        "expectedSequenceName": "<context.sequence.name>",
+        "trackItemId": "<item.id>",
+        "expectedProjectItemId": "<item.projectItemId>",
+        "expectedClipName": "<item.name>",
+        "expectedMediaType": "video",
+        "expectedTrackIndex": 0,
+        "expectedStartSeconds": 10,
+        "expectedEndSeconds": 20,
+        "componentIndex": 0,
+        "componentMatchName": "<component.matchName>",
+        "paramIndex": 0,
+        "expectedDisplayName": "<parameter.displayName>",
+        "detail": "parameter",
+        "timeSeconds": 12
+      },
+      "note": "timeSeconds is sequence time. Replace every selector and numeric guard with fresh evidence."
+    },
+    {
+      "id": "write-parameter",
+      "tool": "set_effect_values",
+      "arguments": {
+        "expectedProjectId": "<context.project.id>",
+        "expectedSequenceId": "<context.sequence.id>",
+        "expectedSequenceName": "<context.sequence.name>",
+        "trackItemId": "<item.id>",
+        "expectedProjectItemId": "<item.projectItemId>",
+        "expectedClipName": "<item.name>",
+        "expectedMediaType": "video",
+        "expectedTrackIndex": 0,
+        "expectedStartSeconds": 10,
+        "expectedEndSeconds": 20,
+        "componentIndex": 0,
+        "componentMatchName": "<component.matchName>",
+        "parameters": [
+          {
+            "paramIndex": 0,
+            "expectedDisplayName": "<parameter.displayName>",
+            "expectedValue": 10,
+            "value": 11
+          }
+        ],
+        "operationId": "11111111-1111-4111-8111-111111111111"
+      },
+      "note": "Static numeric example only. Verify keys/units/support first. New intended work gets a fresh persisted UUID."
+    },
+    {
+      "id": "prepare-track-move",
+      "tool": "prepare_clip_edit",
+      "arguments": {
+        "expectedProjectId": "<context.project.id>",
+        "expectedSequenceId": "<context.sequence.id>",
+        "trackItemId": "<item.id>",
+        "intent": {
+          "kind": "move_to_track",
+          "destinationTrackIndex": 1
+        },
+        "operationId": "11111111-1111-4111-8111-111111111111"
+      },
+      "note": "Preparation only. Execute the returned tool/arguments once; retain operation ID."
+    },
+    {
+      "id": "collapse-header",
+      "tool": "set_effect_disclosure",
+      "arguments": {
+        "expectedProjectId": "<context.project.id>",
+        "expectedSequenceId": "<context.sequence.id>",
+        "expectedSequenceName": "<context.sequence.name>",
+        "trackItemId": "<item.id>",
+        "expectedProjectItemId": "<item.projectItemId>",
+        "expectedClipName": "<item.name>",
+        "expectedMediaType": "video",
+        "expectedTrackIndex": 0,
+        "expectedStartSeconds": 10,
+        "expectedEndSeconds": 20,
+        "componentIndex": 0,
+        "componentMatchName": "<component.matchName>",
+        "expanded": false,
+        "operationId": "11111111-1111-4111-8111-111111111111"
+      },
+      "note": "Explicit UI operation. Ordinary effect value reads/edits expand automatically."
+    },
+    {
+      "id": "effect-job",
+      "tool": "submit_effect_command_sequence",
+      "arguments": {
+        "operationId": "11111111-1111-4111-8111-111111111111",
+        "sequence": {
+          "protocolVersion": 1,
+          "clips": [
+            {
+              "expectedProjectId": "<context.project.id>",
+              "expectedSequenceId": "<context.sequence.id>",
+              "expectedSequenceName": "<context.sequence.name>",
+              "trackItemId": "<item.id>",
+              "expectedProjectItemId": "<item.projectItemId>",
+              "expectedClipName": "<item.name>",
+              "expectedMediaType": "video",
+              "expectedTrackIndex": 0,
+              "expectedStartSeconds": 10,
+              "expectedEndSeconds": 20,
+              "ref": "clip"
+            }
+          ],
+          "effects": [
+            {
+              "ref": "effect",
+              "clipRef": "clip",
+              "componentIndex": 0,
+              "componentMatchName": "<component.matchName>"
+            }
+          ],
+          "steps": [
+            {
+              "op": "set_values",
+              "effectRef": "effect",
+              "parameters": [
+                {
+                  "paramIndex": 0,
+                  "expectedDisplayName": "<parameter.displayName>",
+                  "expectedValue": 10,
+                  "value": 11
+                }
+              ]
+            },
+            {
+              "op": "read",
+              "effectRef": "effect",
+              "paramIndex": 0,
+              "expectedDisplayName": "<parameter.displayName>",
+              "detail": "parameter"
+            }
+          ],
+          "maxRunMs": 240000
+        }
+      },
+      "note": "Acceptance is partial. This example intentionally leaves the requested new value; it is not a restoration benchmark. Exact identity lives inside clips[]."
+    },
+    {
+      "id": "event-cursor",
+      "tool": "wait_runtime_events",
+      "arguments": {},
+      "note": "Call before submitting a job. Keep sessionId and nextRevision."
+    },
+    {
+      "id": "terminal-wait",
+      "tool": "wait_runtime_events",
+      "arguments": {
+        "sessionId": "33333333-3333-4333-8333-333333333333",
+        "afterRevision": 42,
+        "jobId": "22222222-2222-4222-8222-222222222222",
+        "terminalOnly": true,
+        "timeoutMs": 30000
+      },
+      "note": "Replace sessionId/revision/jobId with observed values. A normal wait timeout never authorizes resubmission."
+    },
+    {
+      "id": "effect-status",
+      "tool": "get_effect_command_sequence_status",
+      "arguments": {
+        "jobId": "22222222-2222-4222-8222-222222222222",
+        "cursor": 0
+      },
+      "note": "Drain pages via nextCursor. PASS requires terminal state, all steps and preservation."
+    },
+    {
+      "id": "track-wave-plan",
+      "tool": "prepare_track_wave",
+      "arguments": {
+        "expectedProjectId": "<context.project.id>",
+        "expectedSequenceId": "<context.sequence.id>",
+        "expectedSequenceName": "<context.sequence.name>",
+        "trackItemIds": [
+          "<item.id>"
+        ],
+        "route": [
+          0,
+          1,
+          2,
+          1,
+          0
+        ],
+        "phaseOffsetClips": 3,
+        "minIntervalMs": 0,
+        "maxRunMs": 240000
+      },
+      "note": "Selected clips only. Submit the exact returned tool/arguments; do not reconstruct relocation guards."
+    },
+    {
+      "id": "track-status",
+      "tool": "get_track_command_sequence_status",
+      "arguments": {
+        "jobId": "22222222-2222-4222-8222-222222222222",
+        "cursor": 0
+      },
+      "note": "Track submission returns hostResult.jobId. Round-trip completion also requires returnedToStart."
+    },
+    {
+      "id": "program-frame",
+      "tool": "capture_program_frame",
+      "arguments": {
+        "expectedProjectId": "<context.project.id>",
+        "expectedSequenceId": "<context.sequence.id>",
+        "expectedSequenceName": "<context.sequence.name>",
+        "timeSeconds": 12
+      },
+      "note": "Returns the composited native PNG as an MCP image; this is not a desktop screenshot or mask seed."
+    },
+    {
+      "id": "save",
+      "tool": "save_working_project",
+      "arguments": {
+        "operationId": "11111111-1111-4111-8111-111111111111",
+        "expectedProjectId": "<context.project.id>",
+        "expectedSequenceId": "<context.sequence.id>"
+      },
+      "note": "Requires delivery profile and fresh exact project/sequence IDs. Saves within the requested task scope; optional name is an additional observed guard."
+    },
+    {
+      "id": "reconcile",
+      "tool": "reconcile_mutation",
+      "arguments": {
+        "operationId": "11111111-1111-4111-8111-111111111111"
+      },
+      "note": "Optional adjudication of the exact ROOT operation from recovery. Active work waits; inactive archival may release a lease while preserving the old UNVERIFIED receipt. Neither route permits blind replay."
+    },
+    {
+      "id": "archive-inactive",
+      "tool": "archive_inactive_operation",
+      "arguments": {
+        "operationId": "11111111-1111-4111-8111-111111111111"
+      },
+      "note": "Use only the exact inactive ROOT operation from recovery, never this template UUID. Require leaseReleased; old receipt/content stay unchanged. Inspect actual effects before a corrected edit."
+    }
+  ],
+  "contractVersion": "1.0.0"
+}

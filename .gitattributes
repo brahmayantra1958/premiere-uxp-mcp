@@ -1,0 +1,5 @@
+# macOS Finder/Terminal entry points must retain Unix shebangs on Windows clones.
+*.command text eol=lf
+*.sh text eol=lf
+# Keep the Windows entry points usable directly from Explorer.
+*.cmd text eol=crlf
