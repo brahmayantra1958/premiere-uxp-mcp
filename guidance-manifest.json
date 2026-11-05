@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "packageVersion": "0.3.17",
+  "packageVersion": "0.3.18",
   "serverVersion": "0.2.16",
   "panelSourceVersion": "0.16.10",
   "bundleVersion": "1.0.12",
@@ -34,7 +34,7 @@
     "docs/installation.md": "98cf1e3de77de4845971e82f0989bd22fad0f3e64fcc42361a4fa8b6901e975e",
     "docs/native-addons.md": "9d29a1700325c2174711bf3fa55b6154550add4df8a08810c01e513b7d89246c",
     "docs/operator-runbook.md": "f84b371a0aebd54eb03549e7344b00e3e740568ab08ef81e7cbb84cd3aaa295b",
-    "docs/release-status.md": "d5cfa0ca325e8d5419b3eb73b83a28a5170217fc34a0372b2e2fe42263c632c8",
+    "docs/release-status.md": "76223985bf8e84a3de882a622be78d3ce5505155ca1789cb3f6fe31ec7776033",
     "docs/source-editability-20261018.md": "95b71553f1011f6697792e87331e376481a2493faa9c7385e2f0bdca7e9bf342",
     "docs/tool-catalog.md": "517c3f8c7106539077df5f5078fef5e7cf197a7f80a2c332772535c238ef4ae5",
     "skills/README.md": "3c53d9a8c3fb366bf283219fd2b424e5bac6124685342fe25fbca46d98fd3fe7",

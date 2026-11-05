@@ -24,8 +24,8 @@ export function releasePolicy(root) {
   const guidance = new Set(guidanceInventory(root).files);
   const rootFiles = new Set(['.gitattributes','README.md','AI_INSTALL.md','LICENSE','THIRD_PARTY_NOTICES.md','package.json','package-lock.json','tsconfig.base.json','eslint.config.mjs','vitest.config.mts','Setup.cmd','Setup.command','Connect.cmd','Connect.command']);
   const helperInstallers = new Set(['install-cep-caption-helper.ps1','install-cep-track-targeting.ps1','install-cep-project-selection.ps1','install-cep-effect-disclosure.ps1']);
-  // README renders this image with an HTML <img>, which the markdown link checks do not see.
-  const publicAssets = new Set(['docs/assets/build-timelapse.webp']);
+  // README renders these images with an HTML <img>, which the markdown link checks do not see.
+  const publicAssets = new Set(['docs/assets/build-timelapse.webp','docs/assets/demo.webp','docs/assets/install.webp']);
   return name => {
     const parts = name.split('/');
     if (parts.some(part => ['node_modules','dist','bin','artifacts','.git','deprecated'].includes(part)) || /\.(?:tsbuildinfo|log|p12|pem|exe|dll|prm|acsrf)$/.test(name) || parts.some(part => part.startsWith('.env')) || name === 'apps/uxp-plugin/public/deployment-config.js') return false;

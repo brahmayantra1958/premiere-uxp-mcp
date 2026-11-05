@@ -3,8 +3,8 @@
 
 | 기능군 | 의존성·지원 경계 | 증거 상태 |
 |---|---|---|
-| 지침·스킬·MCP resources | 배포 소스 0.3.17, MCP 서버 0.2.16, 운영 계약 1.0.0, 스킬 bundle 1.0.12 | 정적·프로토콜 검증 대상; 라이브 편집과 별도 |
-| 설치·클라이언트 등록 | Setup에서 Codex/Claude Code/Gemini(Antigravity) 선택, 기존 설정 병합·백업, 스킬 4개 설치, Connect의 정확한 설치 경로·버전 검증 | 격리 설정/빌드 검증; Gemini 병합·충돌·백업은 fixture 검증. Adobe 실제 설치와 다른 PC 검증은 별도 |
+| 지침·스킬·MCP resources | 배포 소스 0.3.18, MCP 서버 0.2.16, 운영 계약 1.0.0, 스킬 bundle 1.0.12 | 정적·프로토콜 검증 대상; 라이브 편집과 별도 |
+| 설치·클라이언트 등록 | Setup에서 Codex/Claude Code/Gemini(Antigravity) 선택(선택지를 한 줄씩 보여 주고, 쓰기 전에 이 사용자의 설정·스킬 경로를 출력), 기존 설정 병합·백업, 스킬 4개 설치, Connect의 정확한 설치 경로·버전 검증 | 격리 설정/빌드 검증; Gemini 병합·충돌·백업은 fixture 검증. Adobe 실제 설치와 다른 PC 검증은 별도 |
 | 배포 식별자 | UXP `ai.brahma.yantra.pr-uxp-mcp`, panel 0.16.10, 보조 플러그인 `ai.brahma.yantra.*` | 기존 ID와 별도 플러그인. 이전 설치 감지·전환 안내를 따라 중복 로드 방지 |
 | 정확한 틱 쓰기 | 모든 native 시간은 가장 가까운 틱 문자열로 만들고 값 보존을 확인한다(`TickTime.createWithSeconds` 미사용). trim_clip_exact·move_clips는 프레임 격자 틱으로 쓰고 PASS에 정확한 틱 readback을 요구하며 되돌리기는 원래 틱을 복원한다. 음수 이동은 문자열 factory, 안 되면 `TIME_ZERO.subtract`로 만들고 전송 전에 증명 | 회귀검사·소스 계약 검사 PASS(가짜 Premiere: 1.001초가 1틱 부족해지는 내림 재현 포함). 실제 Premiere 반영·live readback은 UNVERIFIED |
 | 따라가기 실패와 영수증 | 자동 따라가기 실패 `{status:'unverified',phase,reason}`를 workTarget 계약에 포함하고 reason에서 "content command was not dispatched"를 제거한다. 계약에 맞지 않는 영수증도 버리지 않고 UNVERIFIED(전송 전이면 FAIL)로 저장해 archive/reconcile이 가능하다 | 회귀검사 PASS. 2026-11-04 clone 사례의 원인 요청은 트랙 타기팅 CEP helper의 loopback fetch였다. helper 연결 실패 자체의 원인은 UNVERIFIED |

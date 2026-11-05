@@ -120,24 +120,12 @@ https://github.com/user-attachments/assets/1b96dd6e-09f3-4348-ad5c-613133889664
 
 ### 🎯 Follow demo <br><sub lang="ko">따라가기 시연</sub>
 
-<!--
-  PLACEHOLDER (demo): replace this table with a looping clip, e.g.
-  <img src="docs/assets/demo.gif" width="760" alt="The AI moves the playhead to the clip it is editing and opens its effect">
-  Spec: 6–8 s, 960 px wide, 3 MB or less. Show a chat request, the playhead jumping to the target clip and Effect Controls expanding.
-  For light/dark variants use <picture> with <source media="(prefers-color-scheme: dark)" srcset="...">.
-  Ship every new asset through publicAssets in scripts/distribution/release-policy.mjs.
--->
-<table>
-<tr>
-<td align="center" width="760">
-<br>
-🎬 <b>Demo video</b><br><sub lang="ko">시연 영상</sub><br>
-<sub>Coming soon: the AI pointing at the clip it is editing.</sub><br>
-<sub lang="ko">준비 중: AI가 고치는 클립을 짚어 주는 장면</sub>
-<br><br>
-</td>
-</tr>
-</table>
+Ask in plain words. The AI moves the playhead to the clip it is editing and opens the effect it changed.<br>
+<sub lang="ko">말로 요청하면 AI가 고치는 클립으로 재생헤드를 옮기고, 바꾼 효과를 펼쳐 보여 줍니다.</sub>
+
+<p align="center">
+  <img src="docs/assets/demo.webp" width="760" alt="A request to add a Gaussian blur of 30 to the first clip. The playhead jumps to that clip, the blur appears, and Effect Controls opens on the blur as its amount changes from 20 to 30">
+</p>
 
 <!--
   PLACEHOLDER (screenshots): replace each cell with <img src="docs/assets/<name>.png" width="240" alt="...">.
@@ -161,10 +149,10 @@ https://github.com/user-attachments/assets/1b96dd6e-09f3-4348-ad5c-613133889664
 
 - [ ] **Windows x64** (macOS is experimental)<br>
   <sub lang="ko">Windows x64(macOS는 실험적 지원)</sub>
-- [ ] **Premiere Pro 26.3 or later** with Creative Cloud<br>
-  <sub lang="ko">Premiere Pro 26.3 이상과 Creative Cloud</sub>
-- [ ] **Claude Code, Codex or Gemini**<br>
-  <sub lang="ko">Claude Code, Codex 또는 Gemini</sub>
+- [ ] **Premiere Pro 26.3 or later** with the Creative Cloud app: [Premiere Pro](https://www.adobe.com/products/premiere.html) · [Creative Cloud app](https://www.adobe.com/creativecloud/desktop-app.html)<br>
+  <sub lang="ko">Premiere Pro 26.3 이상과 Creative Cloud 앱. 위 링크에서 설치합니다.</sub>
+- [ ] **Claude Code, Codex or Gemini:** [Claude Code](https://code.claude.com/docs/en/quickstart) · [Codex (ChatGPT)](https://openai.com/codex/) · [Gemini (Antigravity)](https://antigravity.google/download)<br>
+  <sub lang="ko">Claude Code, Codex(ChatGPT), Gemini(Antigravity) 중 하나. 위 링크에서 설치합니다.</sub>
 - [ ] **Internet access** for Setup<br>
   <sub lang="ko">Setup에 쓸 인터넷 연결</sub>
 
@@ -191,21 +179,12 @@ You do not need UXP Developer Tool.<br>
 ♊ **Using Gemini?** In Antigravity, restart `premiere` under **MCP Servers** before you open a new conversation.<br>
 <sub lang="ko">Gemini를 쓴다면 새 대화를 열기 전에 Antigravity의 **MCP Servers**에서 `premiere`를 다시 시작하세요.</sub>
 
-<!--
-  PLACEHOLDER (install walkthrough): replace this table with docs/assets/install.gif (10–15 s, 960 px wide):
-  the extracted folder → Setup's client prompt → Window → UXP Plugins → the connected panel.
--->
-<table>
-<tr>
-<td align="center" width="760">
-<br>
-📽️ <b>Install walkthrough</b><br><sub lang="ko">설치 따라 하기</sub><br>
-<sub>Coming soon: from the extracted folder to the connected panel.</sub><br>
-<sub lang="ko">준비 중: 압축을 푼 폴더부터 연결된 패널까지</sub>
-<br><br>
-</td>
-</tr>
-</table>
+📽️ **Install walkthrough:** from the extracted folder to the connected panel.<br>
+<sub lang="ko">설치 따라 하기: 압축을 푼 폴더부터 연결된 패널까지</sub>
+
+<p align="center">
+  <img src="docs/assets/install.webp" width="760" alt="Install walkthrough: the extracted folder with Setup.cmd, Setup's AI app menu, Window, UXP Plugins, Premiere UXP MCP, and the connected panel">
+</p>
 
 > [!TIP]
 > **Let your AI install it.** Open this folder in Claude Code, Codex or Gemini and paste:<br>

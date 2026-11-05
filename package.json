@@ -1,6 +1,6 @@
 {
   "name": "premiere-uxp-mcp",
-  "version": "0.3.17",
+  "version": "0.3.18",
   "private": true,
   "description": "UXP-first, readback-verified MCP automation for Adobe Premiere Pro 2026.",
   "workspaces": [

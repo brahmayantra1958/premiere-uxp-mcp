@@ -4,7 +4,7 @@ import {describe,it,expect} from 'vitest';
 import {parse as parseToml} from 'smol-toml';
 import {guidanceInventory} from '../../scripts/distribution/guidance-lib.mjs';
 import {applyClientRegistration,clientLocations,mergeCodexConfiguration,mergeClaudeConfiguration,mergeGeminiConfiguration,planClientRegistration,registerClients,publicClientPlan} from '../../installer/client-registration.mjs';
-import {setupOptions} from '../../installer/setup-options.mjs';
+import {CLIENT_PROMPT,clientFromChoice,clientMenu,describeRegistration,setupOptions} from '../../installer/setup-options.mjs';
 import {verifyConnection} from '../../installer/connect.mjs';
 
 const repository=path.resolve('.');
@@ -138,6 +138,23 @@ describe('setup and connection boundaries',()=>{
     expect(setupOptions(['--client','gemini','--non-interactive']).client).toBe('gemini');
     expect(setupOptions(['--client','gemini','--client-config',path.join(repository,'settings.json')]).config).toBe(path.join(repository,'settings.json'));
     expect(()=>setupOptions(['--client','antigravity'])).toThrow('codex, claude, gemini, both or none');
+  });
+  it('keeps the interactive menu numbers and shows one choice per line',()=>{
+    expect(['','1','2','3','4','5',' 2 '].map(clientFromChoice)).toEqual(['codex','codex','claude','both','none','gemini','claude']);
+    for(const typed of ['0','6','12','codex','manual'])expect(clientFromChoice(typed)).toBeUndefined();
+    const home='C:\\Users\\홍길동';const menu=clientMenu(home);const lines=menu.split('\n');
+    expect(menu).toContain(home);
+    for(const [number,label] of [['1','Codex'],['2','Claude Code'],['3','Codex and Claude Code'],['4','Manual'],['5','Gemini (Antigravity)']])expect(lines.some(line=>line.startsWith(`  ${number}  ${label}`))).toBe(true);
+    expect(lines.find(line=>line.startsWith('  1  '))).toContain('(default)');
+    expect(Math.max(...lines.map(line=>line.replace(home,'').length))).toBeLessThanOrEqual(80);
+    expect(CLIENT_PROMPT).toContain('Enter alone = 1');
+  });
+  it('prints the resolved per-user registration targets before writing',()=>{
+    const options=fixture();
+    const text=describeRegistration(registerClients({...options,client:'both'}),'C:\\install\\artifacts\\install');
+    for(const target of [clientLocations('codex',options),clientLocations('claude',options)]) {expect(text).toContain(target.config);expect(text).toContain(target.skillsTarget);}
+    expect(text).toContain('Claude Code');
+    expect(describeRegistration(registerClients({...options,client:'none'}),'C:\\install\\artifacts\\install')).toContain('skipped (Manual)');
   });
   it('rejects an old panel or another checkout even when the runtime says ready',()=>{
     const root=repository,panelVersion='0.15.1';

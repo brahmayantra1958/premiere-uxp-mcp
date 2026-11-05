@@ -7,7 +7,8 @@ import { spawnSync } from 'node:child_process';
 import { createInterface } from 'node:readline/promises';
 import { assertSupported, adobeInstaller, defaultSettings, mcpConfiguration, premiereIsRunning, readJson, run, writeJson, writeLocalDeployment, zipDirectory } from './lib.mjs';
 import { installTrackLockHelper } from './track-lock-helper.mjs';
-import { setupOptions } from './setup-options.mjs';
+import os from 'node:os';
+import { CLIENT_PROMPT, clientFromChoice, clientMenu, describeRegistration, setupOptions } from './setup-options.mjs';
 import { connectInstallation } from './connect.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -20,10 +21,13 @@ const {prepareOnly}=options;
 assertSupported();
 async function ask(message) {const input=createInterface({input:process.stdin,output:process.stdout});try{return await input.question(message);}finally{input.close();}}
 if(!prepareOnly&&!options.client) {
-  // Existing numbers keep their meaning; Gemini (Antigravity) is appended.
-  const choice=(await ask('Install MCP and four skills for: 1 Codex, 2 Claude Code, 3 Both (Codex and Claude Code), 4 Manual, 5 Gemini (Antigravity) (default 1): ')).trim();
-  options.client=({'':'codex','1':'codex','2':'claude','3':'both','4':'none','5':'gemini'})[choice];
-  if(!options.client)throw Error('Choose 1, 2, 3, 4 or 5; no installation was performed');
+  // Nothing is installed before a valid answer; a mistyped number is asked again.
+  console.log(clientMenu(os.homedir()));
+  for(let attempt=1;!options.client;attempt++) {
+    options.client=clientFromChoice(await ask(CLIENT_PROMPT));
+    if(!options.client&&attempt>=3)throw Error('Choose 1, 2, 3, 4 or 5; no installation was performed');
+    if(!options.client)console.log('Please type one number from 1 to 5.');
+  }
 }
 const resultDirectory = path.join(root, 'artifacts/install');
 mkdirSync(resultDirectory, { recursive: true });
@@ -61,6 +65,8 @@ try {
     ({registerClients}=await import('./client-registration.mjs'));
     const plan=registerClients({root,node:process.execPath,...options});
     writeJson(path.join(resultDirectory,'client-plan.json'),plan);
+    // Show the resolved per-user locations before anything is written there.
+    console.log(describeRegistration(plan,resultDirectory));
     if(plan.status==='CONFLICT')throw Error('Existing premiere entry or skills conflict. See artifacts/install/client-plan.json. Compare them before explicitly using --replace-client/--replace-skills. No client configuration was changed.');
   }
   step('Build', () => npmRun(['run', 'build']));
