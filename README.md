@@ -47,7 +47,7 @@ Copy, modify, redistribute or sell it without asking or paying.<br>
 
 🙏 **Credit is optional**<br>
 A one-line mention of "brahmayantra1958" is always appreciated.<br>
-<sub lang="ko">출처 표시는 선택입니다. "brahmayantra1958" 한 줄을 남겨 주시면 언제나 고맙습니다.</sub>
+<sub lang="ko">출처 표시는 선택입니다. "brahmayantra1958" 한 줄을 남겨 주시면 감사할 것 같습니다.</sub>
 
 </td>
 <td width="50%" valign="top">
@@ -68,7 +68,7 @@ We provide it without warranty, and bundled third-party parts follow their own l
 
 💬 **Edit by just asking**<br>
 Ask "Cut at 3 seconds," "Close the gaps," "Warm up the color," or "Export a review copy," and the AI agent does it right away.<br>
-<sub lang="ko">「3초에서 잘라 줘」「빈 곳 메워 줘」「색감 따뜻하게」「검토용으로 내보내 줘」라고 말하면 AI 에이전트가 바로 처리합니다.</sub>
+<sub lang="ko">「3초에서 잘라 줘」「빈 곳 메워 줘」「색감 따뜻하게」「검토용으로 내보내 줘」라고 말하면 AI 에이전트가 바로 처리해줍니다.</sub>
 
 </td>
 <td width="50%" valign="top">
@@ -91,7 +91,7 @@ Tell the AI agent to build captions from an SRT, add titles and transitions, or 
 
 🤝 **Stay in charge**<br>
 Jump in and edit by hand anytime, and trim any cut later. The AI agent leaves your original footage as it is.<br>
-<sub lang="ko">언제든 직접 이어서 편집하고, 어떤 컷이든 나중에 다시 다듬을 수 있습니다. AI 에이전트는 원본 영상을 그대로 둡니다.</sub>
+<sub lang="ko">언제든 직접 이어서 편집하고, 어떤 컷이든 나중에 다시 다듬을 수 있습니다.</sub>
 
 </td>
 </tr>
@@ -120,8 +120,8 @@ https://github.com/user-attachments/assets/1b96dd6e-09f3-4348-ad5c-613133889664
 
 ### 🎯 Follow demo <br><sub lang="ko">따라가기 시연</sub>
 
-Ask in plain words. The AI moves the playhead to the clip it is editing and opens the effect it changed.<br>
-<sub lang="ko">말로 요청하면 AI가 고치는 클립으로 재생헤드를 옮기고, 바꾼 효과를 펼쳐 보여 줍니다.</sub>
+Ask in plain words through chatGPT/claude/Gemini Desktop app. The AI moves the playhead to the clip it is editing and opens the effect it changed.<br>
+<sub lang="ko">AI가 고치고 있는 클립으로 재생헤드가 옮겨지고, 효과를 바꿀 땐 바꾸고 있는 효과 패널을 펼쳐서 보여 줍니다.</sub>
 
 <p align="center">
   <img src="docs/assets/demo.webp" width="760" alt="A request to add a Gaussian blur of 30 to the first clip. The playhead jumps to that clip, the blur appears, and Effect Controls opens on the blur as its amount changes from 20 to 30">
