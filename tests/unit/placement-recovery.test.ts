@@ -8,8 +8,9 @@ import {AuditLog,ReceiptStore} from '../../apps/mcp-server/src/audit.js';
 import {HostExecutor} from '../../apps/mcp-server/src/host-executor.js';
 import {freshTestDirectory} from '../helpers/workspace.js';
 
-function fixture(){
+function fixture(options:{snappedOutTicks?:string;placedOutTicks?:string}={}){
   const time=(seconds:number)=>({ticks:String(Math.round(seconds*254016000000)),seconds});
+  const exact=(ticks:string)=>({ticks,seconds:Number(ticks)/254016000000});
   const items=['video','audio'].map(mediaType=>({id:`${mediaType}:0:${time(3).ticks}:master`,projectItemId:'master',name:'source',mediaType,trackIndex:0,
     start:time(3),end:time(23),inPoint:time(0),outPoint:time(20),speed:1,reversed:false,disabled:false,adjustmentLayer:false}));
   const component={matchName:'intrinsic',params:[{value:1,timeVarying:false,keyframes:[],keyframeDetails:[]}]};
@@ -20,12 +21,14 @@ function fixture(){
       captionTrackStates:[{index:0,id:0,name:'captions',muted:false,itemCount:3,transitionCount:0}],duration:time(23),items,
       tracks:['video','audio'].flatMap(mediaType=>[0,1].map(index=>({mediaType,index,id:index,name:mediaType+index,muted:false,itemCount:1-index,transitionCount:0})))}});
   const args={expectedProjectId:'p',expectedSequenceId:'s',placements:[{projectItemId:'sub',timeSeconds:0,videoTrackIndex:1,audioTrackIndex:1,mode:'overwrite'}]};
-  const creationArgs={projectItemId:'master',name:'spacer',startSeconds:0,endSeconds:1.001,hardBoundaries:true,takeVideo:true,takeAudio:true};
+  const creationArgs={projectItemId:'master',name:'spacer',startSeconds:0,endSeconds:options.snappedOutTicks?5.333333:1.001,hardBoundaries:true,takeVideo:true,takeAudio:true};
   const creation={kind:'mutation',request:{id:'create',command:'create_subclip',args:creationArgs},receipt:{commandId:'create',command:'create_subclip',status:'partial',
-    completedAt:'2026-09-21T00:00:00Z',requestFingerprint:createOperationFingerprint('create_subclip',creationArgs),after:{created:{id:'sub',name:'spacer'}}}};
+    completedAt:'2026-09-21T00:00:00Z',requestFingerprint:createOperationFingerprint('create_subclip',creationArgs),after:{created:{id:'sub',name:'spacer'},
+      ...(options.snappedOutTicks?{requestedRange:{inPoint:exact('0'),outPoint:exact(options.snappedOutTicks)}}:{})}}};
+  const placedOut=options.placedOutTicks??options.snappedOutTicks,out=placedOut?exact(placedOut):time(1.001);
   const plan=createMutationPlan(before,'place_clips',args,'plan'),current=structuredClone(before);current.projectId='reopened';
   for(const original of before.activeSequence!.items){
-    const item={...original,id:`${original.mediaType}:1:0:sub`,name:'spacer',projectItemId:'sub',trackIndex:1,start:time(0),end:time(1.001),inPoint:time(0),outPoint:time(1.001)};
+    const item={...original,id:`${original.mediaType}:1:0:sub`,name:'spacer',projectItemId:'sub',trackIndex:1,start:time(0),end:out,inPoint:time(0),outPoint:out};
     current.activeSequence!.items.push(item);
     current.activeSequence!.tracks.find(t=>t.mediaType===item.mediaType&&t.index===1)!.itemCount=1;
     for(const key of ['effects','audioState'] as const){
@@ -40,6 +43,14 @@ describe('bounded AV subclip placement recovery',()=>{
     const f=fixture();
     expect(assessPlacementRecovery(f.plan,f.args,f.current,f.creation)).toMatchObject({status:'pass',outcome:'observed_complete_av_subclip_placement',contentReplayed:false});
     expect(assessPlacementRecovery(f.plan,f.args,f.before,f.creation)).toMatchObject({status:'pass',outcome:'observed_original_content'});
+  });
+  it('uses the exact frame-snapped range recorded by create_subclip, and rejects the old floored frame',()=>{
+    const frame160=String(160n*8467200000n),f=fixture({snappedOutTicks:frame160});
+    expect(assessPlacementRecovery(f.plan,f.args,f.current,f.creation)).toMatchObject({status:'pass',outcome:'observed_complete_av_subclip_placement'});
+    const floored=fixture({snappedOutTicks:frame160,placedOutTicks:String(159n*8467200000n)});
+    expect(()=>assessPlacementRecovery(floored.plan,floored.args,floored.current,floored.creation)).toThrow('RECOVERY_PLACEMENT_CONTENT_CHANGED_OR_PARTIAL');
+    const offset=fixture({snappedOutTicks:frame160});(offset.creation.receipt.after as any).requestedRange.inPoint.ticks='1';
+    expect(()=>assessPlacementRecovery(offset.plan,offset.args,offset.current,offset.creation)).toThrow('RECOVERY_PLACEMENT_SOURCE_EVIDENCE_MISSING');
   });
   it.each(['one_stream','wrong_range','unrelated_effect','added_effect','caption','occupied','truncated','wrong_path','wrong_source','wrong_receipt','insert','multiple'])('rejects %s',fault=>{
     const f=fixture();

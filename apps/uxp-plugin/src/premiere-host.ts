@@ -46,7 +46,7 @@ import {
 } from "./clip-split.js";
 import { hostNumericValuesEqual, isTransientHostObjectInvalidation } from "./component-write.js";
 import { collectObjectMaskPrompt } from "./mask-prompt-controller.js";
-import {revealEffectDisclosure} from "./effect-disclosure.js";
+import {revealEffectDisclosure,explicitDisclosureResult} from "./effect-disclosure.js";
 import {revealParameter} from "./parameter-disclosure.js";
 import {trackObjectMaskFrames} from "./mask-tracking.js";
 import type {MaskTrackingPhase,MaskTrackingWork,NativeMaskWork} from "@premiere-uxp/contracts/mask-tracking";
@@ -62,7 +62,7 @@ import { assessTimelineSelection } from "./timeline-selection.js";
 import { assessLiftRemoval } from "./timeline-removal.js";
 import { assessExactClipMove, exactMoveTicks, moveTicksMatch, planExactClipMove, type MoveTimelineItem } from "./timeline-move.js";
 import { assessExactClipTrim, exactTrimTicks, planExactClipTrim, trimTicksMatch, type TrimTimelineItem } from "./timeline-trim.js";
-import { exactTicksFromSeconds } from "./tick-conversion.js";
+import { exactTicksFromSeconds, frameTicksFromRate, snapTicksToFrameGrid } from "./tick-conversion.js";
 import {
   assertLocalScratchPath, asTickTime, LOCAL_SCRATCH_ROOT, normalizeHostPath,
   PROJECT_ITEM_LIMIT, splitWindowsPath, text, TRACK_ITEM_LIMIT, type AnyRecord, WORKING_SEQUENCE_PREFIX,
@@ -797,7 +797,27 @@ async function createSubclip(args: AnyRecord): Promise<HostResult> {
   const sourceItem=await findProjectItem(project,text(args.projectItemId));
   const sourceClip=await ppro.ClipProjectItem.cast(sourceItem);
   assertMethod(sourceClip,"createSubClipAction","ClipProjectItem.createSubClipAction");
-  const startTime = exactTickFromSeconds(start), endTime = exactTickFromSeconds(end);
+  // Premiere truncates a sub-frame out point (5.333333 s became 159 frames at
+  // 30 fps). Snap float noise to the source frame grid and refuse real
+  // between-frame times before dispatch; audio-only subclips stay sample-exact.
+  let startTicks = exactTicksFromSeconds(start), endTicks = exactTicksFromSeconds(end);
+  let frameGrid: AnyRecord = { status: "unavailable" };
+  if (args.takeVideo !== false && typeof sourceClip.getFootageInterpretation === "function") {
+    let frameTicks: string | undefined;
+    try { frameTicks = frameTicksFromRate((await sourceClip.getFootageInterpretation())?.getFrameRate?.()); } catch { frameTicks = undefined; }
+    if (frameTicks) {
+      const snapStart = snapTicksToFrameGrid(startTicks, frameTicks), snapEnd = snapTicksToFrameGrid(endTicks, frameTicks);
+      const off = !snapStart ? { field: "startSeconds", value: start, ticks: startTicks } : !snapEnd ? { field: "endSeconds", value: end, ticks: endTicks } : undefined;
+      if (off) {
+        const frame = BigInt(frameTicks), earlier = BigInt(off.ticks) / frame, toSeconds = (frames: bigint) => (Number(frames * frame) / 254016000000).toFixed(6);
+        throw new HostCommandError("SUBCLIP_TIME_OFF_FRAME_GRID", `${off.field} ${off.value} falls between source frames; use ${toSeconds(earlier)} (frame ${earlier}) or ${toSeconds(earlier + 1n)} (frame ${earlier + 1n})`,
+          { contentDispatched: false, retryable: false, errorClassification: "preflight" });
+      }
+      startTicks = snapStart!.ticks; endTicks = snapEnd!.ticks;
+      frameGrid = { status: "source_frame_grid", frameTicks, startFrame: snapStart!.frame, endFrame: snapEnd!.frame, startSnapped: snapStart!.snapped, endSnapped: snapEnd!.snapped };
+    }
+  }
+  const startTime = tickTimeFromTicks(startTicks), endTime = tickTimeFromTicks(endTicks);
   const requestedRange = { inPoint: asTickTime(startTime), outPoint: asTickTime(endTime) };
   const hostResult = executeTransaction(project, `Create subclip ${name}`, () => [sourceClip.createSubClipAction(
     name,
@@ -834,7 +854,7 @@ async function createSubclip(args: AnyRecord): Promise<HostResult> {
     before: { count: beforeItems.length },
     hostResult,
     after: { count: afterItems.length, created, range, rangeReadback,
-      requestedRange },
+      requestedRange, frameGrid },
     errors: status === "pass" ? [] : status === "partial"
       ? ["Premiere created the subclip but returned an unavailable in/out sentinel; verify the hard-bounded duration after timeline placement"]
       : ["Created subclip or its source range did not read back from Premiere"],
@@ -3670,7 +3690,7 @@ export class PremiereHost {
         if(request.command==='get_effect_values')await this.prepareNativeColorSamples(request);
         if(request.command==='set_effect_disclosure') {
           const panel=await this.revealPanel(request),expansion=await this.revealEffect(request);
-          return {status:expansion?.status??'unsupported',hostResult:{visibility:{...panel,effectExpansion:expansion},expanded:request.args.expanded,contentChanged:false},errors:expansion?.status==='pass'?[]:[String(expansion?.reason??'Native disclosure was not verified')]};
+          return explicitDisclosureResult(expansion,panel,request.args.expanded);
         }
         const visibility=await this.followPanels(request);
         if(['apply_video_effect','apply_audio_effect','remove_effect'].includes(request.command))this.parameterSchemas.clear();

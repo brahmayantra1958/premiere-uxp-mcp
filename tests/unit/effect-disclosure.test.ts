@@ -1,5 +1,5 @@
 import {describe,it,expect,vi} from 'vitest';
-import {revealEffectDisclosure} from '../../apps/uxp-plugin/src/effect-disclosure.js';
+import {revealEffectDisclosure,explicitDisclosureResult} from '../../apps/uxp-plugin/src/effect-disclosure.js';
 import {deriveEffectHeaderBinding,effectRevealPlan,resolveEffectObservation,effectDisclosureProves,effectSectionProves,effectQueryScopeProves,type EffectDisclosureWork} from '@premiere-uxp/contracts/effect-disclosure';
 const work:EffectDisclosureWork={sequenceName:'WORKING__test',componentMatchNames:['vendor.any','vendor.other','vendor.any'],target:{mediaType:'video',trackIndex:0,startTicks:'100',endTicks:'200',clipName:'clip',mediaPath:'C:\\clip.mov',componentMatchName:'vendor.any',componentIndex:2,parameterCount:2}};
 const raw=(bits:boolean[])=>({protocol:1,status:'pass',route:'windows_msaa_effect_state',premierePid:10,panelHandle:20,selectedClipTab:'WORKING__test • clip',headers:bits.map((on,i)=>({role:43,state:on?8:0,height:14,top:180+i*100})),viewport:{role:3,top:153,height:402}});
@@ -100,6 +100,32 @@ describe('effect disclosure derivation and host boundary',()=>{
   const f=fixture(),hidden={...state(true),headers:state(true).headers.map((h,i)=>i===2?{...h,state:32776,top:39}:h)};
   f.services.request.mockImplementation(async phase=>phase==='clear_verify'?{status:'pass',empty:true}:phase==='inspect'?{available:false,layoutVerified:true,readback:hidden} as any:{status:'pass',readback:state(true)});
   expect(await f.run()).toMatchObject({status:'pass'});expect(f.services.clearSelection).not.toHaveBeenCalled();expect(f.services.request.mock.calls.map(c=>c[0])).toEqual(['inspect','scroll']);
+ });
+ it.each([
+  ['target clip tab not selected',{status:'pass',available:true,layoutVerified:false,readback:{...state(false),selectedClipTab:null}},'EFFECT_CONTROLS_TAB_NOT_SELECTED: Effect Controls did not report "WORKING__test • clip" as its selected clip tab; nothing was written'],
+  ['native observation failed',{status:'unverified',available:true,layoutVerified:false,readback:{status:'unverified',reason:'NATIVE_EFFECT_OBSERVATION_UNAVAILABLE',nativeReason:'ACCESSIBILITY_NAME_READ_BUDGET'}},'NATIVE_EFFECT_OBSERVATION_UNAVAILABLE: ACCESSIBILITY_NAME_READ_BUDGET; nothing was written'],
+  ['headers hidden',{status:'pass',available:true,layoutVerified:false,readback:{...state(false),headers:[]}},'EFFECT_HEADERS_UNVERIFIED'],
+ ])('stops before any write with a precise reason when the %s',async(_case,inspect,reason)=>{
+  const f=fixture();f.services.request.mockImplementation(async phase=>{f.events.push(phase);return inspect as any;});
+  const result=await f.run();
+  expect(result).toMatchObject({status:'unverified',disclosureDispatched:false});expect(result.reason).toContain(reason);
+  expect(f.events).toEqual(['guard','inspect']);expect(f.services.clearSelection).not.toHaveBeenCalled();
+ });
+ it('names an unaddressable component before reading its header state',async()=>{
+  const f=fixture();f.services.request.mockImplementation(async phase=>{f.events.push(phase);return {status:'pass',available:true,layoutVerified:true,readback:state(false)} as any;});
+  const result=await revealEffectDisclosure({...work,target:{...work.target,componentIndex:1}},f.services);
+  expect(result).toMatchObject({status:'unverified',disclosureDispatched:false});expect(result.reason).toMatch(/^EFFECT_HEADER_NOT_ADDRESSABLE: /);
+ });
+ it('reports an explicit no-write stop as a lease-free failure and keeps every later status',()=>{
+  const panel={status:'unverified',panel:'effect_controls'};
+  const stopped=explicitDisclosureResult({status:'unverified',reason:'EFFECT_CONTROLS_TAB_NOT_SELECTED: x',disclosureDispatched:false,propertyWrites:[]},panel,true);
+  expect(stopped).toMatchObject({status:'fail',hostResult:{contentDispatched:false,contentChanged:false,expanded:true,visibility:{panel:'effect_controls',effectExpansion:{status:'fail',disclosureDispatched:false}}},errors:['EFFECT_CONTROLS_TAB_NOT_SELECTED: x']});
+  for(const later of [{status:'unverified',changed:true,propertyWrites:[]},{status:'unverified',disclosureDispatched:false,propertyWrites:[{key:'ECP.Filter.Expanded'}]},{status:'unsupported',reason:'helper missing'}]){
+   const result=explicitDisclosureResult(later,panel,false);
+   expect(result.status).toBe(later.status);expect(result.hostResult).not.toHaveProperty('contentDispatched');
+  }
+  expect(explicitDisclosureResult({status:'pass',changed:true},panel,true)).toMatchObject({status:'pass',errors:[]});
+  expect(explicitDisclosureResult(undefined,undefined,true)).toMatchObject({status:'unsupported',errors:['Native disclosure was not verified']});
  });
  it('does not clear selection if the helper is unavailable',async()=>{
   const f=fixture();f.services.request.mockResolvedValue({status:'unsupported'} as any);expect((await f.run()).status).toBe('unsupported');expect(f.services.clearSelection).not.toHaveBeenCalled();

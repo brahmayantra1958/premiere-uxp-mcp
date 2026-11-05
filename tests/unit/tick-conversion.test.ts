@@ -22,3 +22,16 @@ describe('exact source boundary ticks',()=>{
     expect(()=>context.exactTickFromSeconds(1.001)).toThrow('exact source-boundary ticks');
   });
 });
+import {frameTicksFromRate,snapTicksToFrameGrid} from '../../apps/uxp-plugin/src/tick-conversion.js';
+describe('source frame grid',()=>{
+  it.each([[30,'8467200000'],[25,'10160640000'],[24,'10584000000'],[60,'4233600000'],[30000/1001,'8475667200'],[29.97,'8475667200'],[24000/1001,'10594584000'],[23.976,'10594584000'],[60000/1001,'4237833600']])('maps %s fps to exact frame ticks',(fps,ticks)=>{
+    expect(frameTicksFromRate(fps)).toBe(ticks);
+  });
+  it.each([0,-1,NaN,Infinity,12.3456,undefined,'30'])('returns no grid for %s',value=>expect(frameTicksFromRate(value)).toBeUndefined());
+  it('snaps float noise to the nearest frame and refuses between-frame times',()=>{
+    const frame='8467200000';
+    expect(snapTicksToFrameGrid(exactTicksFromSeconds(5.333333),frame)).toEqual({ticks:String(160n*8467200000n),frame:'160',snapped:true});
+    expect(snapTicksToFrameGrid(String(159n*8467200000n),frame)).toEqual({ticks:String(159n*8467200000n),frame:'159',snapped:false});
+    expect(snapTicksToFrameGrid(exactTicksFromSeconds(5.35),frame)).toBeNull();
+  });
+});

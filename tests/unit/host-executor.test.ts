@@ -67,6 +67,20 @@ describe("HostExecutor readback and idempotency", () => {
     expect(await store.inspectRecovery()).toBeUndefined();
     expect((await host.mutate('set_effect_values',args,'next')).status).toBe('pass');
   });
+  it('keeps no lease after an explicit disclosure that stopped before writing, but keeps one after an unproven write',async()=>{
+    const {explicitDisclosureResult}=await import('../../apps/uxp-plugin/src/effect-disclosure.js');
+    const directory=await freshTestDirectory('disclosure-no-write'),store=new ReceiptStore(path.join(directory,'receipts.json'));
+    const stopped=explicitDisclosureResult({status:'unverified',reason:'EFFECT_CONTROLS_TAB_NOT_SELECTED: x',disclosureDispatched:false,propertyWrites:[]},{panel:'effect_controls'},true);
+    const unproven=explicitDisclosureResult({status:'unverified',changed:true,propertyWrites:[]},{panel:'effect_controls'},true);
+    const bridge={async call(r:BridgeRequest):Promise<BridgeResponse>{return {version:1,id:r.id,ok:true,result:r.id==='stopped'?stopped:r.id==='unproven'?unproven:{status:'pass'},durationMs:1};}} as UxpBridgeServer;
+    const host=new HostExecutor(bridge,new AuditLog(path.join(directory,'audit.jsonl')),store,1000);
+    const args={expectedProjectId:'p',expectedSequenceId:'s',expectedSequenceName:'S',trackItemId:'video:0:0:source',expectedProjectItemId:'source',expectedMediaType:'video',expectedTrackIndex:0,expectedStartSeconds:0,expectedEndSeconds:2,componentIndex:1,componentMatchName:'AE.ADBE Motion',expanded:true};
+    expect(await host.mutate('set_effect_disclosure',args,'stopped')).toMatchObject({status:'fail',errorClassification:'preflight',hostResult:{contentDispatched:false},errors:['EFFECT_CONTROLS_TAB_NOT_SELECTED: x']});
+    expect(await store.inspectRecovery()).toBeUndefined();
+    expect((await host.mutate('set_effect_disclosure',{...args,expanded:false},'next')).status).toBe('pass');
+    expect((await host.mutate('set_effect_disclosure',args,'unproven')).status).toBe('unverified');
+    expect(await store.inspectRecovery()).toBeDefined();
+  });
   it('returns PASS for a successful quarantine query and exposes the actual MCP owner',async()=>{
     const directory=await freshTestDirectory('production-owner'),file=path.join(directory,'receipts.json'),store=new ReceiptStore(file);
     store.setClientNameProvider(()=> 'production-client');

@@ -3,10 +3,10 @@
 
 | 기능군 | 의존성·지원 경계 | 증거 상태 |
 |---|---|---|
-| 지침·스킬·MCP resources | 배포 소스 0.3.18, MCP 서버 0.2.16, 운영 계약 1.0.0, 스킬 bundle 1.0.12 | 정적·프로토콜 검증 대상; 라이브 편집과 별도 |
+| 지침·스킬·MCP resources | 배포 소스 0.3.19, MCP 서버 0.2.16, 운영 계약 1.0.0, 스킬 bundle 1.0.12 | 정적·프로토콜 검증 대상; 라이브 편집과 별도 |
 | 설치·클라이언트 등록 | Setup에서 Codex/Claude Code/Gemini(Antigravity) 선택(선택지를 한 줄씩 보여 주고, 쓰기 전에 이 사용자의 설정·스킬 경로를 출력), 기존 설정 병합·백업, 스킬 4개 설치, Connect의 정확한 설치 경로·버전 검증 | 격리 설정/빌드 검증; Gemini 병합·충돌·백업은 fixture 검증. Adobe 실제 설치와 다른 PC 검증은 별도 |
 | 배포 식별자 | UXP `ai.brahma.yantra.pr-uxp-mcp`, panel 0.16.10, 보조 플러그인 `ai.brahma.yantra.*` | 기존 ID와 별도 플러그인. 이전 설치 감지·전환 안내를 따라 중복 로드 방지 |
-| 정확한 틱 쓰기 | 모든 native 시간은 가장 가까운 틱 문자열로 만들고 값 보존을 확인한다(`TickTime.createWithSeconds` 미사용). trim_clip_exact·move_clips는 프레임 격자 틱으로 쓰고 PASS에 정확한 틱 readback을 요구하며 되돌리기는 원래 틱을 복원한다. 음수 이동은 문자열 factory, 안 되면 `TIME_ZERO.subtract`로 만들고 전송 전에 증명 | 회귀검사·소스 계약 검사 PASS(가짜 Premiere: 1.001초가 1틱 부족해지는 내림 재현 포함). 실제 Premiere 반영·live readback은 UNVERIFIED |
+| 정확한 틱 쓰기 | 모든 native 시간은 가장 가까운 틱 문자열로 만들고 값 보존을 확인한다(`TickTime.createWithSeconds` 미사용). trim_clip_exact·move_clips는 프레임 격자 틱으로 쓰고 PASS에 정확한 틱 readback을 요구하며 되돌리기는 원래 틱을 복원한다. 음수 이동은 문자열 factory, 안 되면 `TIME_ZERO.subtract`로 만들고 전송 전에 증명. create_subclip은 원본 비디오 프레임 격자에서 1/1000프레임 이내면 격자에 맞추고(`after.frameGrid`), 프레임 사이 값은 전송 전에 거부한다 | 회귀검사·소스 계약 검사 PASS(가짜 Premiere: 1.001초가 1틱 부족해지는 내림 재현 포함). 실제 Premiere 반영·live readback은 UNVERIFIED |
 | 따라가기 실패와 영수증 | 자동 따라가기 실패 `{status:'unverified',phase,reason}`를 workTarget 계약에 포함하고 reason에서 "content command was not dispatched"를 제거한다. 계약에 맞지 않는 영수증도 버리지 않고 UNVERIFIED(전송 전이면 FAIL)로 저장해 archive/reconcile이 가능하다 | 회귀검사 PASS. 2026-11-04 clone 사례의 원인 요청은 트랙 타기팅 CEP helper의 loopback fetch였다. helper 연결 실패 자체의 원인은 UNVERIFIED |
 | MOGRT 뒤에 추가 | insert_mogrt_caption의 명시적 trailing_append, exact count/hash/target/frame과 전체 빈 suffix·전환 없음·트랙 상태 검증 | Premiere26.5.2/호환후보0.15.17에서 두 인접 프레임의 기존 방식 대비 전체42파라미터·source bounds·트랙·원래 시퀀스 보존 PASS. 네 PNG의 독립 SHA도 동일. 다른 템플릿·중간 빈 구간의 지원을 뜻하지 않음 |
 | 대량 그래픽·오디오 복제 | 동일 source 트랙의 additive overwrite를 매 항목 fresh 원본·action1개 transaction으로 처리. 매 단계 전체 원본·누적 신규·트랙·전환·설정 readback, 첫 실패에서 중단하며 재전송 없음 | 관련83개 회귀검사 PASS. 호환패널0.15.19/Premiere26.5.2에서 그래픽107복제·오디오96클립 배치의 내용·보존·저장 PASS. 전체 단계는 각각32.108초/29.979초로 기준 대비1.29배/1.19배, 5배 목표 미달. 이전 compound의 부분 적용과 오디오 종료 때문에 해당 최적화를 제거했으며 과거18배·5.41배를 현재 성능으로 사용하지 않음. native 원인과 모든 환경의 무충돌은 미확정 |
@@ -23,11 +23,11 @@
 | 원본 구간 배치·편집 여유 | 실제 write.sourceRangePlacement:true 필요; 영상은 programMonitorFrame 및 독립 렌더 기준 필요. get_agent_context.placementCapabilities에서 먼저 확인 | 소스·오프라인 회귀 PASS; 실제 설치와 렌더·음성·확장 UNVERIFIED. 패널 버전만으로 지원 판정 불가 |
 | 트랙 잠금 | source panel 0.15.1 + 별도 ai.brahma.yantra.track-lock helper | 소스/회귀 준비; 이 개발 기록에서 설치·live lock 변경 UNVERIFIED |
 | targeting·Project 선택·intrinsic disclosure·SRT | 기능별 CEP helper; Windows Setup 설치 대상 | 설치 manifest와 live heartbeat 별도 확인 |
-| native focus·scroll·caption font | Windows 기능별 C# adapter | 현재 환경·정확 대상 native proof 필요 |
+| native focus·scroll·caption font | Windows 기능별 C# adapter. 효과 컨트롤은 패널 루트에 자식 번호로 묻는다 | 현재 환경·정확 대상 native proof 필요. 2026-11-06 live: 305노드 관찰 8.3~8.8초 → 0.65~0.9초, 모션 접기·펼치기 PASS. 쓰기 전에 멈춘 set_effect_disclosure는 잠금 없는 FAIL |
 | video 시간·Color/Point·native tool·mask tracking | 별도 Adobe SDK 플러그인, 일부 Premiere 26.5 대상 | 범용 후보와 설치기 준비. Adobe wrapper 재배포 근거 미확인으로 공개 바이너리 제외; 실제 설치/실행 없으면 해당 기능 미지원 |
 | macOS | 공통 UXP·설치 경로 실험적, track-lock 설치 경로 포함 | 실기기 UNVERIFIED; Windows native parity 없음 |
 | proxy·미디어 분석·검사 | 별도 FFmpeg/ffprobe | 도구/코덱 설치와 실제 산출물 확인 |
-| SRT 새 트랙 가져오기 | exact frameTicks를 제공하는 패널·고정 SRT helper, 입력 SRT는 그대로 전달 | 예상 큐 시각과 UXP readback 비교. 불일치는 생성된 트랙을 남긴 UNVERIFIED이며 자동 재가져오기/1프레임 보정 없음 |
+| SRT 새 트랙 가져오기 | exact frameTicks를 제공하는 패널·고정 SRT helper, 입력 SRT는 그대로 전달 | 예상 큐 시각과 UXP readback 비교. 기본 계획과 격자 위 ±1프레임 차이는 Adobe 가져오기 양자화로 PASS(경고 `CAPTION_TIMING_IMPORTER_QUANTIZED`, 큐별 차이 보존). 그 밖의 불일치와 명시 계획과의 차이는 생성된 트랙을 남긴 UNVERIFIED이며 자동 재가져오기·보정은 없다 |
 | 기존 caption 큐별 글꼴·크기·RGB | edit_existing_sequence_structure의 captionStyle.items, 정확한 트랙·큐 index/ticks, 지원되는 단일 style run archive | 프로젝트 저장·닫기·다시 열기가 필요. 미선택 큐·template·문구·시각 보존과 archive/UXP 검증. ProjectItem 없는 그래픽은 고유 위치·이름·component 체인으로 AV 구조 보존을 검증하며 opaque 그래픽 원문/렌더는 미검증. 실제 설치 글꼴·색 픽셀은 프레임으로 별도 확인 |
 | 기존 caption 문구·native Object Mask 생성 | 응답별 현재 지원 한계 | 문구 preview/활성화를 완료로 보고하지 않음 |
 | 외부 segmentation | 명시적으로 선택한 서비스/model | 실제 가용성과 single-frame/videoTracking capability 확인 |

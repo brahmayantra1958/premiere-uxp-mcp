@@ -1,5 +1,25 @@
-import {effectRevealPlan,effectNativeObservationProves,effectDisclosureProves,effectSectionProves,type EffectDisclosurePhase,type EffectDisclosureWork} from "@premiere-uxp/contracts/effect-disclosure";
+import {effectRevealPlan,effectNativeObservationProves,effectDisclosureProves,effectSectionProves,effectOccurrenceCount,type EffectDisclosurePhase,type EffectDisclosureWork} from "@premiere-uxp/contracts/effect-disclosure";
 type Receipt=Record<string,any>;
+/** Why the pre-write inspection could not bind the target header. Only the
+ * panel reveal and target follow have run by then; no disclosure preference or
+ * component property has been written. */
+export function unobservedDisclosureReason(work:EffectDisclosureWork,readback:Receipt|undefined):string{
+  const tab=`${work.sequenceName} • ${work.target.clipName}`;
+  if(!effectOccurrenceCount(work))return "EFFECT_HEADER_NOT_ADDRESSABLE: the requested component has no unique native header; nothing was written";
+  if(!readback||readback.status!=="pass")return `NATIVE_EFFECT_OBSERVATION_UNAVAILABLE: ${String(readback?.nativeReason??readback?.reason??"no native readback")}; nothing was written`;
+  if(readback.selectedClipTab!==tab)return `EFFECT_CONTROLS_TAB_NOT_SELECTED: Effect Controls did not report "${tab}" as its selected clip tab; nothing was written, so the request can be retried`;
+  return "EFFECT_HEADERS_UNVERIFIED: the native effect headers were not fully observed; nothing was written";
+}
+/** Result of the explicit set_effect_disclosure command. A stop before any
+ * disclosure write is a known failure without dispatched content, so it keeps
+ * no lease and can simply be retried. Later stops keep the flow's own status. */
+export function explicitDisclosureResult(expansion:Receipt|undefined,panel:Receipt|undefined,expanded:unknown):Receipt{
+  const unwritten=expansion?.status!=="pass"&&expansion?.disclosureDispatched===false&&!(Array.isArray(expansion?.propertyWrites)&&expansion.propertyWrites.length>0);
+  const effectExpansion=unwritten?{...expansion,status:"fail"}:expansion;
+  return {status:unwritten?"fail":expansion?.status??"unsupported",
+    hostResult:{visibility:{...panel,effectExpansion},expanded,contentChanged:false,...(unwritten?{contentDispatched:false}:{})},
+    errors:expansion?.status==="pass"?[]:[String(expansion?.reason??"Native disclosure was not verified")]};
+}
 export type EffectDisclosureServices={
   request:(phase:EffectDisclosurePhase,work:EffectDisclosureWork)=>Promise<Receipt>;
   assertTarget:()=>Promise<void>;
@@ -38,7 +58,7 @@ export async function revealEffectDisclosure(work:EffectDisclosureWork,services:
   if(effectNativeObservationProves(work,before.readback))initialObservation={plan,headerExpanded:before.readback.headers.map((header:Receipt)=>(header.state&8)!==0)};
   if(plan==="ready")return finish(await scroll(before.readback,{changed:false}));
   if(before.available!==true)return {...before,status:"unsupported",reason:"Collapsed effect requires the approved disclosure helper"};
-  if(plan==="unavailable"||before.layoutVerified!==true)return {status:"unverified",reason:"Native effect observation is unavailable",readback:before.readback};
+  if(plan==="unavailable"||before.layoutVerified!==true)return {status:"unverified",reason:unobservedDisclosureReason(work,before.readback),disclosureDispatched:false,readback:before.readback};
   let restored=false;
   const change=async(phase:"write"|"calibrate_write")=>{
     let clearAttempted=false;

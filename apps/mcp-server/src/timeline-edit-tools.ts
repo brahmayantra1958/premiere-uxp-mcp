@@ -11,7 +11,7 @@ import { sourceRangePlacementOperation } from './source-range-operation.js';
 
 export function registerPlacementTools(server: McpServer, host: HostExecutor, paths: PathPolicy): void {
   server.registerTool("create_subclip", {
-    description: "Create a hard-bounded Premiere subclip from an explicit source range and verify the new project item and bounds.",
+    description: "Create a hard-bounded Premiere subclip from an explicit source range and verify the new project item and bounds. With video, a start/end within 1/1000 frame of the source frame grid snaps to it (after.frameGrid reports the frames); a time between frames is refused before any edit, naming the two nearest valid times. after.requestedRange is the exact range sent; use its duration for a following place_clips expectedDurationSeconds.",
     inputSchema: { ...targetInputs,
       projectItemId: z.string().min(1),
       name: z.string().min(1),

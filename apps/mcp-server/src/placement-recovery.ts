@@ -7,11 +7,13 @@ import {canonicalSnapshot} from './track-relocation-recovery.js';
 const localPath=(value:string)=>normalizeLocalPath(value);
 const ticks=(seconds:number)=>String(Math.round(seconds*254016000000));
 const time=(seconds:number)=>({ticks:ticks(seconds),seconds});
+const exact=(value:string)=>({ticks:value,seconds:Number(value)/254016000000});
 function requireProof(condition:unknown,reason:string):asserts condition {if(!condition)throw Error('RECOVERY_PLACEMENT_'+reason);}
 
 /** One zero-in-point, hard-bounded AV subclip overwritten onto two empty
  * existing tracks. Range comes from an earlier durable create_subclip receipt,
- * never caller recovery arguments. Both streams and all exposed prior content
+ * never caller recovery arguments: its exact requestedRange ticks when recorded
+ * (the end may be snapped to the source frame grid), else the requested seconds. Both streams and all exposed prior content
  * must match. Original uncertain receipts and all project content stay untouched. */
 export function assessPlacementRecovery(planValue:unknown,args:Record<string,any>,currentValue:unknown,creation:any){
   const plan=editPlanSchema.parse(planValue),before=plan.baseSnapshot,current=projectSnapshotSchema.parse(currentValue);
@@ -30,6 +32,10 @@ export function assessPlacementRecovery(planValue:unknown,args:Record<string,any
     creation.receipt.requestFingerprint===createOperationFingerprint('create_subclip',source)&&
     created?.id===placement.projectItemId&&source?.hardBoundaries===true&&source.takeVideo===true&&source.takeAudio===true&&
     source.startSeconds===0&&Number.isFinite(source.endSeconds)&&source.endSeconds>0, 'SOURCE_EVIDENCE_MISSING');
+  const range=creation.receipt.after?.requestedRange,outTicks=range?String(range.outPoint?.ticks??''):ticks(source.endSeconds);
+  requireProof(/^\d+$/.test(outTicks)&&BigInt(outTicks)>0n&&(!range||String(range.inPoint?.ticks)==='0'), 'SOURCE_EVIDENCE_MISSING');
+  const outPoint=range?exact(outTicks):time(source.endSeconds);
+  const endAt=(start:number)=>range?exact(String(BigInt(ticks(start))+BigInt(outTicks))):time(start+source.endSeconds);
   const subclips=before.projectItems.filter(p=>p.id===created.id),masters=before.projectItems.filter(p=>p.id===source.projectItemId);
   requireProof(subclips.length===1&&masters.length===1&&subclips[0]!.name===source.name&&
     subclips[0]!.kind==='clip'&&masters[0]!.kind==='clip'&&subclips[0]!.path&&masters[0]!.path&&
@@ -45,10 +51,10 @@ export function assessPlacementRecovery(planValue:unknown,args:Record<string,any
     requireProof(references.length===1,'REFERENCE_AMBIGUOUS');
     const reference=references[0]!;
     requireProof(reference.speed===1&&reference.reversed===false&&reference.disabled===false&&reference.inPoint?.ticks==='0'&&
-      reference.outPoint&&BigInt(reference.outPoint.ticks)>=BigInt(ticks(source.endSeconds)), 'REFERENCE_UNVERIFIED');
+      reference.outPoint&&BigInt(reference.outPoint.ticks)>=BigInt(outTicks), 'REFERENCE_UNVERIFIED');
     const id=[mediaType,trackIndex,ticks(placement.timeSeconds),created.id].join(':');addedIds.push(id);
     const item={...reference,id,name:subclips[0]!.name,projectItemId:created.id,trackIndex,
-      start:time(placement.timeSeconds),end:time(placement.timeSeconds+source.endSeconds),inPoint:time(0),outPoint:time(source.endSeconds)};
+      start:time(placement.timeSeconds),end:endAt(placement.timeSeconds),inPoint:time(0),outPoint};
     requireProof(before.activeSequence.duration&&BigInt(item.end.ticks)<=BigInt(before.activeSequence.duration.ticks), 'DURATION_EXTENSION_UNSUPPORTED');
     expected.activeSequence!.items.push(item);
     expected.activeSequence!.tracks.find(t=>t.mediaType===mediaType&&t.index===trackIndex)!.itemCount++;

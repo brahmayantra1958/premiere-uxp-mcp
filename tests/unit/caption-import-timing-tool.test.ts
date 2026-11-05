@@ -52,10 +52,12 @@ describe('caption import timing integration',()=>{
     expect(f.oldTrack).toEqual({index:0,id:5,name:'Existing C1',muted:false,itemCount:3});
     expect(state.helper.mock.calls[0]![0]).toMatchObject({srtPath:'C:/scratch/hash.srt',expectedCaptionTracksBefore:1});
   });
-  it('retains the created track and exact per-cue deltas for a native one-frame-early import',async()=>{
+  it('passes a native one-frame-early import as importer quantization and keeps the exact per-cue deltas',async()=>{
     const f=fixture({early:true}),value=await f.run();
-    expect(value).toMatchObject({status:'unverified',hostResult:{contentDispatched:true,track:{index:1,id:6,name:'New captions'},creation:{verified:true},source:{sha256:'source-hash'},timingVerification:{status:'unverified',summary:{startFrameDeltaCounts:{'-1':2},endFrameDeltaCounts:{'-1':2}}},preservation:{avUnchanged:true}}});
-    expect(value.errors).toContain('CAPTION_TIMING_MISMATCH');expect(state.helper).toHaveBeenCalledTimes(1);expect(f.host.mutate).toHaveBeenCalledTimes(1);
+    expect(value).toMatchObject({status:'pass',hostResult:{contentDispatched:true,track:{index:1,id:6,name:'New captions'},creation:{verified:true},source:{sha256:'source-hash'},
+      timingVerification:{status:'pass',warnings:['CAPTION_TIMING_IMPORTER_QUANTIZED'],summary:{quantizedCueCount:2,mismatchedCueCount:0,startFrameDeltaCounts:{'-1':2},endFrameDeltaCounts:{'-1':2}}},preservation:{avUnchanged:true}}});
+    expect(value.hostResult).not.toHaveProperty('recovery');expect(value.errors??[]).not.toContain('CAPTION_TIMING_MISMATCH');
+    expect(state.helper).toHaveBeenCalledTimes(1);expect(f.host.mutate).toHaveBeenCalledTimes(1);
   });
   it('supports an explicit expected-tick verification plan without modifying helper input',async()=>{
     const f=fixture({early:true}),expectedTimingPlan={frameTicks:frame,cues:[{startTicks:'0',endTicks:frame},{startTicks:frame,endTicks:String(2n*F)}]};

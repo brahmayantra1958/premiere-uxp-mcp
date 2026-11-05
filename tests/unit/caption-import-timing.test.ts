@@ -8,13 +8,29 @@ const ms=(value:number)=>String(BigInt(value)*254016000n);
 const native=(frameTicks:string,items:ReturnType<typeof cue>[])=>({status:'partial',frameTicks,items:items.map((item,index)=>({index,...item}))});
 
 describe('caption import timing verification',()=>{
-  it('detects the observed 23.976 one-frame-early placement, including an exact 1.001-second source boundary',()=>{
+  it('classifies the observed 23.976 one-frame-early placement as importer quantization and still reports every delta',()=>{
     const frame=BigInt(ntsc24),source=[cue(ms(52),ms(94)),cue(ms(1001),ms(5005))];
     const plan=planCaptionImportTiming(source,ntsc24);
     expect(plan.expectedCues).toEqual([cue(frame,2n*frame),cue(24n*frame,120n*frame)]);
     const proof=verifyCaptionImportTiming(plan,native(ntsc24,[cue(0n,frame),cue(23n*frame,119n*frame)]));
-    expect(proof).toMatchObject({status:'unverified',summary:{checkedCueCount:2,mismatchedCueCount:2,startFrameDeltaCounts:{'-1':2},endFrameDeltaCounts:{'-1':2}}});
+    expect(proof).toMatchObject({status:'pass',warnings:['CAPTION_TIMING_IMPORTER_QUANTIZED'],
+      summary:{checkedCueCount:2,matchedCueCount:0,quantizedCueCount:2,mismatchedCueCount:0,quantizedIndexSample:[0,1],startFrameDeltaCounts:{'-1':2},endFrameDeltaCounts:{'-1':2}}});
     expect(proof.cues[1]).toMatchObject({sourceStartTicks:ms(1001),expectedStartTicks:String(24n*frame),actualStartTicks:String(23n*frame),startFrameDelta:'-1'});
+  });
+  it('accepts the observed 30 fps truncation of millisecond SRT times without hiding which cues moved',()=>{
+    const frame=8467200000n,source=[cue(ms(1020),ms(2560)),cue(ms(3000),ms(4100))];
+    const plan=planCaptionImportTiming(source,String(frame));
+    const floor=(ticks:bigint)=>ticks/frame*frame,actual=source.map(c=>cue(floor(BigInt(c.startTicks)),floor(BigInt(c.endTicks))));
+    const proof=verifyCaptionImportTiming(plan,native(String(frame),actual));
+    expect(proof).toMatchObject({status:'pass',summary:{matchedCueCount:1,quantizedCueCount:1,quantizedIndexSample:[0],startFrameDeltaCounts:{'-1':1,'0':1},endFrameDeltaCounts:{'-1':1,'0':1}}});
+  });
+  it('keeps a two-frame shift and any explicit-plan difference unverified',()=>{
+    const frame=BigInt(ntsc24),source=[cue(ms(1001),ms(5005))],plan=planCaptionImportTiming(source,ntsc24);
+    const shifted=verifyCaptionImportTiming(plan,native(ntsc24,[cue(22n*frame,120n*frame)]));
+    expect(shifted).toMatchObject({status:'unverified',errors:['CAPTION_TIMING_MISMATCH'],summary:{quantizedCueCount:0,mismatchedCueCount:1}});
+    const explicit=planCaptionImportTiming(source,ntsc24,{frameTicks:ntsc24,cues:[cue(24n*frame,120n*frame)]});
+    const strict=verifyCaptionImportTiming(explicit,native(ntsc24,[cue(23n*frame,119n*frame)]));
+    expect(strict).toMatchObject({status:'unverified',errors:['CAPTION_TIMING_MISMATCH'],importerQuantization:{appliesToExplicitPlan:false},summary:{quantizedCueCount:0}});
   });
   it('rounds exact half-frame ties later using integer arithmetic and keeps just-below ties earlier',()=>{
     const frame=BigInt(ntsc24),half=frame/2n;

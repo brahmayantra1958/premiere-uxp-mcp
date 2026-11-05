@@ -27,7 +27,10 @@ function interval(cue:CaptionCueTiming,index:number,label:string):CaptionCueTimi
 /** This is the tool's declared expectation, not a claim about Adobe's SRT
  * quantization. Non-negative ticks round to the nearest sequence frame; exact
  * half-frame ties go to the later frame. No floating-point fps or compensation.
- * Explicit plans only replace the expected result; source bytes never change. */
+ * Explicit plans only replace the expected result; source bytes never change.
+ * Adobe's own SRT quantization differs by frame rate (observed: 23.976 one frame
+ * early, 30 truncated, 29.97 another pattern), so verification classifies an
+ * on-grid difference of at most one frame from this default plan separately. */
 export function planCaptionImportTiming(source:readonly CaptionCueTiming[],frameTicks:string,explicit?:ExpectedCaptionTimingPlan):CaptionImportTimingPlan {
   const frame=BigInt(captionFrameTicks(frameTicks));
   if(!Array.isArray(source)||!source.length||source.length>10000)throw Error('CAPTION_TIMING_SOURCE_COUNT_INVALID');
@@ -57,6 +60,9 @@ function observedTicks(value:unknown):string|null {
 type CueTimingResult={index:number;sourceStartTicks:string|null;sourceEndTicks:string|null;expectedStartTicks:string|null;expectedEndTicks:string|null;
   actualStartTicks:string|null;actualEndTicks:string|null;startFrameDelta:string|null;endFrameDelta:string|null};
 const detailLimit=250,detailJsonBytes=128*1024,deltaKindLimit=32;
+/** Whole-frame, on-grid differences Adobe's SRT importer is known to produce.
+ * Fractional (off-grid) deltas are never included. Explicit plans stay exact. */
+const importerQuantizationDeltas=new Set(['-1','0','1']);
 
 export function verifyCaptionImportTiming(plan:CaptionImportTimingPlan,readback:{frameTicks?:unknown;items?:unknown;status?:unknown}) {
   const frame=BigInt(plan.frameTicks),errors:string[]=[];
@@ -68,8 +74,9 @@ export function verifyCaptionImportTiming(plan:CaptionImportTimingPlan,readback:
   if(!Array.isArray(readback.items)||actual.length>10000)errors.push('CAPTION_TIMING_ITEMS_UNVERIFIED');
   if(actual.length!==plan.expectedCues.length)errors.push('CAPTION_TIMING_COUNT_MISMATCH');
   const startFrameDeltaCounts:Record<string,number>={},endFrameDeltaCounts:Record<string,number>={};
-  let matched=0,mismatched=0,unverified=0,offFrameGridEndpoints=0,detailBytes=0,startFrameDeltaCountsOmitted=0,endFrameDeltaCountsOmitted=0;
-  const cues:CueTimingResult[]=[],mismatchIndexSample:number[]=[],unverifiedIndexSample:number[]=[];
+  let matched=0,quantized=0,mismatched=0,unverified=0,offFrameGridEndpoints=0,detailBytes=0,startFrameDeltaCountsOmitted=0,endFrameDeltaCountsOmitted=0;
+  const cues:CueTimingResult[]=[],mismatchIndexSample:number[]=[],unverifiedIndexSample:number[]=[],quantizedIndexSample:number[]=[];
+  const importerQuantized=(delta:string|null)=>plan.policy==='nearest_frame_half_up'&&delta!==null&&importerQuantizationDeltas.has(delta);
   const checkedCueCount=Math.min(10000,Math.max(plan.expectedCues.length,actual.length));
   const countDelta=(counts:Record<string,number>,value:string)=>{
     if(value.length>96||counts[value]===undefined&&Object.keys(counts).length>=deltaKindLimit)return false;
@@ -87,6 +94,7 @@ export function verifyCaptionImportTiming(plan:CaptionImportTimingPlan,readback:
     if(actualEndTicks!==null&&BigInt(actualEndTicks)%frame!==0n)offFrameGridEndpoints++;
     if(!valid){unverified++;if(unverifiedIndexSample.length<32)unverifiedIndexSample.push(index);}
     else if(startFrameDelta==='0'&&endFrameDelta==='0')matched++;
+    else if(importerQuantized(startFrameDelta)&&importerQuantized(endFrameDelta)){quantized++;if(quantizedIndexSample.length<32)quantizedIndexSample.push(index);}
     else{mismatched++;if(mismatchIndexSample.length<32)mismatchIndexSample.push(index);}
     const row={index,sourceStartTicks:source?.startTicks??null,sourceEndTicks:source?.endTicks??null,
       expectedStartTicks:expected?.startTicks??null,expectedEndTicks:expected?.endTicks??null,
@@ -99,9 +107,12 @@ export function verifyCaptionImportTiming(plan:CaptionImportTimingPlan,readback:
   }
   if(unverified)errors.push('CAPTION_TIMING_CUE_READBACK_UNVERIFIED');
   if(mismatched)errors.push('CAPTION_TIMING_MISMATCH');
+  const warnings=quantized?['CAPTION_TIMING_IMPORTER_QUANTIZED']:[];
   return {status:errors.length?'unverified' as const:'pass' as const,policy:plan.policy,verificationOnly:true,
     frameTicks:plan.frameTicks,actualFrameTicks,frameDeltaUnit:'exact signed rational sequence frames; actual minus expected',
-    summary:{expectedCueCount:plan.expectedCues.length,actualCueCount:actual.length,checkedCueCount,matchedCueCount:matched,mismatchedCueCount:mismatched,unverifiedCueCount:unverified,
-      offFrameGridEndpoints,startFrameDeltaCounts,endFrameDeltaCounts,startFrameDeltaCountsOmitted,endFrameDeltaCountsOmitted,mismatchIndexSample,unverifiedIndexSample},
-    details:{returnedCueCount:cues.length,totalCueCount:Math.max(plan.expectedCues.length,actual.length),limit:detailLimit,maxJsonBytes:detailJsonBytes,truncated:cues.length<Math.max(plan.expectedCues.length,actual.length)},cues,errors};
+    importerQuantization:{rule:'default plan only: every endpoint on the frame grid and at most one whole frame from the nearest-frame plan',
+      appliesToExplicitPlan:false,quantizedCueCount:quantized},
+    summary:{expectedCueCount:plan.expectedCues.length,actualCueCount:actual.length,checkedCueCount,matchedCueCount:matched,quantizedCueCount:quantized,mismatchedCueCount:mismatched,unverifiedCueCount:unverified,
+      offFrameGridEndpoints,startFrameDeltaCounts,endFrameDeltaCounts,startFrameDeltaCountsOmitted,endFrameDeltaCountsOmitted,mismatchIndexSample,quantizedIndexSample,unverifiedIndexSample},
+    details:{returnedCueCount:cues.length,totalCueCount:Math.max(plan.expectedCues.length,actual.length),limit:detailLimit,maxJsonBytes:detailJsonBytes,truncated:cues.length<Math.max(plan.expectedCues.length,actual.length)},cues,errors,warnings};
 }

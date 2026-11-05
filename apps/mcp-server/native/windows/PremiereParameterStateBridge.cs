@@ -75,7 +75,7 @@ internal static class PremiereParameterStateBridge {
   int count=root.accChildCount;if(count<1||count>16384)throw new Exception("COLOR_LAYOUT_UNBOUNDED");
   var all=new List<IAccessible>();var headers=new List<int>();int tab=-1,viewport=-1;
   var children=Children(root,0,count,count);
-  var names=PremiereEffectStateBridge.ReadNames(root,children,timer,12000);
+  var names=PremiereEffectStateBridge.ReadNames(root,0,children.Length,timer,12000);
   for(int i=0;i<count;i++){
    if(timer.ElapsedMilliseconds>14000)throw new Exception("COLOR_ROW_SCROLL_BUDGET");
    var n=children[i];all.Add(n);string name=names[i];
@@ -177,7 +177,7 @@ internal static class PremiereParameterStateBridge {
         int newCount=root.accChildCount;if(newCount<1||newCount>16384)throw new Exception("PARAMETER_LAYOUT_CHANGED_UNBOUNDED");
         var all=new List<IAccessible>();var names=new List<string>();var headers=new List<int>();IAccessible newTab=null,newViewport=null;int newTabIndex=-1,newViewportIndex=-1;
         var children=Children(root,0,newCount,newCount);
-        var freshNames=PremiereEffectStateBridge.ReadNames(root,children,timer,12000);
+        var freshNames=PremiereEffectStateBridge.ReadNames(root,0,children.Length,timer,12000);
         for(int j=0;j<newCount;j++){
           if(timer.ElapsedMilliseconds>14000)throw new Exception("PARAMETER_SCROLL_BUDGET");var n=children[j];all.Add(n);names.Add(freshNames[j]);
           if(names[j]==r.tab&&(State(n)&8)!=0){if(newTab!=null)throw new Exception("PARAMETER_TAB_AMBIGUOUS");newTab=n;newTabIndex=j;}

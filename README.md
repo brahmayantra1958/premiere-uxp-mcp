@@ -114,7 +114,7 @@ Your AI client edits Premiere through a local MCP server and the UXP panel.<br>
 ### 🎵 Final render <br><sub lang="ko">최종 렌더</sub>
 
 The AI agent switched 203 clips to a new font and effect every frame and laid down percussion and orchestral chords.<br>
-<sub lang="ko">AI 에이전트가 클립 203개를 프레임마다 새 글꼴과 효과로 바꿨고, 타악기와 오케스트라 화음을 깔았습니다.</sub>
+<sub lang="ko">AI 에이전트가 클립 203개를 프레임마다 새 글꼴과 효과로 바꿨고, 타악기와 오케스트라 화음을 깔아서 만든 영상</sub>
 
 https://github.com/user-attachments/assets/1b96dd6e-09f3-4348-ad5c-613133889664
 
@@ -126,24 +126,6 @@ Ask in plain words. The AI moves the playhead to the clip it is editing and open
 <p align="center">
   <img src="docs/assets/demo.webp" width="760" alt="A request to add a Gaussian blur of 30 to the first clip. The playhead jumps to that clip, the blur appears, and Effect Controls opens on the blur as its amount changes from 20 to 30">
 </p>
-
-<!--
-  PLACEHOLDER (screenshots): replace each cell with <img src="docs/assets/<name>.png" width="240" alt="...">.
-  Suggested files: panel.png, follow-playhead.png, effect-controls.png (16:10, same width).
--->
-<table>
-<tr>
-<td align="center" width="250">
-<br>🖼️<br><b>Panel</b><br><sub lang="ko">패널</sub><br><br>
-</td>
-<td align="center" width="250">
-<br>🖼️<br><b>Playhead &amp; clip follow</b><br><sub lang="ko">재생헤드·클립 따라가기</sub><br><br>
-</td>
-<td align="center" width="250">
-<br>🖼️<br><b>Effect Controls</b><br><sub lang="ko">효과 컨트롤 펼침</sub><br><br>
-</td>
-</tr>
-</table>
 
 ## 🧰 Before you start <br><sub lang="ko">준비물</sub>
 
